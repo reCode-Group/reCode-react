@@ -7,12 +7,12 @@ import Link from "next/link";
 
 export default function ResetPassword() {
   return (
-    <section>
+    <section className="section-shell">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="pb-12 text-center">
-            <h1 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+            <h1 className="theme-display-title animate-[gradient_6s_linear_infinite] font-nacelle text-3xl font-semibold md:text-4xl">
               Reset your password
             </h1>
           </div>
@@ -20,7 +20,7 @@ export default function ResetPassword() {
           <form className="mx-auto max-w-[400px]">
             <div>
               <label
-                className="mb-1 block text-sm font-medium text-indigo-200/65"
+                className="theme-label mb-1 block text-sm font-medium"
                 htmlFor="email"
               >
                 Email

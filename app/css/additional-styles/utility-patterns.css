@@ -53,3 +53,283 @@ input[type='search']::-webkit-search-results-decoration {
 .form-checkbox {
     @apply rounded-xs;
 }
+
+:root {
+    --site-bg: #030712;
+    --site-text: #e5e7eb;
+    --site-panel: rgba(17, 24, 39, 0.9);
+    --site-panel-border: linear-gradient(to right, var(--color-gray-800), var(--color-gray-700), var(--color-gray-800));
+    --site-muted: rgb(199 210 254 / 0.65);
+    --site-heading: #e5e7eb;
+    --site-subtle: #4b5563;
+    --site-field-bg: rgb(17 24 39 / 0.5);
+    --site-field-border: #374151;
+    --site-field-focus: #4b5563;
+    --site-secondary-btn-bg: linear-gradient(to bottom, rgb(31 41 55), rgb(31 41 55 / 0.6));
+    --site-secondary-btn-text: #d1d5db;
+    --site-secondary-btn-border: linear-gradient(to right, var(--color-gray-800), var(--color-gray-700), var(--color-gray-800));
+    --site-card-bg: linear-gradient(to bottom right, rgb(17 24 39 / 0.5), rgb(31 41 55 / 0.25), rgb(17 24 39 / 0.5));
+    --site-card-surface: #030712;
+    --site-card-overlay: linear-gradient(to bottom right, rgb(17 24 39 / 0.5), rgb(31 41 55 / 0.25), rgb(17 24 39 / 0.5));
+    --site-card-border: linear-gradient(to right, var(--color-gray-800), var(--color-gray-700), var(--color-gray-800));
+    --site-pill-bg: rgb(31 41 55 / 0.4);
+    --site-pill-border: linear-gradient(to bottom, rgb(55 65 81 / 0.15), rgb(55 65 81 / 0.5));
+    --site-arrow-bg: rgb(31 41 55 / 0.65);
+    --site-arrow-border: rgb(55 65 81 / 0.5);
+    --site-divider: linear-gradient(to right, transparent, rgb(148 163 184 / 0.25), transparent);
+    --site-band: linear-gradient(to right, transparent, rgb(31 41 55 / 0.5));
+    --site-filter-bg: rgb(31 41 55 / 0.4);
+    --site-play-bg: #030712;
+    --site-video-frame: linear-gradient(to bottom right, rgb(17 24 39), rgb(99 102 241 / 0.2), rgb(17 24 39));
+    --site-separator: #374151;
+}
+
+html[data-theme="light"] {
+    --site-bg: #f8fafc;
+    --site-text: #0f172a;
+    --site-panel: rgba(255, 255, 255, 0.88);
+    --site-panel-border: linear-gradient(to right, rgb(191 219 254), rgb(224 231 255), rgb(191 219 254));
+    --site-muted: rgb(71 85 105 / 0.86);
+    --site-heading: #0f172a;
+    --site-subtle: #64748b;
+    --site-field-bg: rgba(255, 255, 255, 0.92);
+    --site-field-border: #cbd5e1;
+    --site-field-focus: #94a3b8;
+    --site-secondary-btn-bg: linear-gradient(to bottom, rgb(255 255 255), rgb(241 245 249));
+    --site-secondary-btn-text: #334155;
+    --site-secondary-btn-border: linear-gradient(to right, rgb(191 219 254), rgb(224 231 255), rgb(191 219 254));
+    --site-card-bg: linear-gradient(to bottom right, rgb(255 255 255 / 0.96), rgb(248 250 252 / 0.92), rgb(239 246 255 / 0.96));
+    --site-card-surface: #ffffff;
+    --site-card-overlay: linear-gradient(to bottom right, rgb(255 255 255 / 0.92), rgb(241 245 249 / 0.45), rgb(219 234 254 / 0.6));
+    --site-card-border: linear-gradient(to right, rgb(191 219 254), rgb(224 231 255), rgb(191 219 254));
+    --site-pill-bg: rgb(255 255 255 / 0.88);
+    --site-pill-border: linear-gradient(to bottom, rgb(191 219 254 / 0.55), rgb(148 163 184 / 0.45));
+    --site-arrow-bg: rgb(255 255 255 / 0.92);
+    --site-arrow-border: rgb(191 219 254 / 0.8);
+    --site-divider: linear-gradient(to right, transparent, rgb(148 163 184 / 0.45), transparent);
+    --site-band: linear-gradient(to right, transparent, rgb(219 234 254 / 0.7));
+    --site-filter-bg: rgb(255 255 255 / 0.92);
+    --site-play-bg: #ffffff;
+    --site-video-frame: linear-gradient(to bottom right, rgb(255 255 255), rgb(219 234 254 / 0.85), rgb(255 255 255));
+    --site-separator: #94a3b8;
+}
+
+.site-shell {
+    background: var(--site-bg);
+    color: var(--site-text);
+}
+
+.header-shell {
+    background: var(--site-panel);
+}
+
+.header-shell::before,
+.btn-secondary::before,
+.workflow-pill::before,
+.testimonial-card::before {
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 1px solid transparent;
+    background: var(--site-card-border) border-box;
+    -webkit-mask: linear-gradient(white 0 0) padding-box, linear-gradient(white 0 0);
+    mask: linear-gradient(white 0 0) padding-box, linear-gradient(white 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude !important;
+    content: "";
+}
+
+.header-shell::before {
+    background: var(--site-panel-border) border-box;
+}
+
+.theme-muted,
+.theme-link,
+.theme-label {
+    color: var(--site-muted);
+}
+
+.theme-heading {
+    color: var(--site-heading);
+}
+
+.theme-subtle,
+.theme-separator {
+    color: var(--site-subtle);
+}
+
+.theme-display-title {
+    background-image: linear-gradient(
+        to right,
+        var(--color-gray-200),
+        var(--color-indigo-200),
+        var(--color-gray-50),
+        var(--color-indigo-300),
+        var(--color-gray-200)
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.theme-eyebrow {
+    background-image: linear-gradient(to right, var(--color-indigo-500), var(--color-indigo-200));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.theme-eyebrow-lines::before,
+.theme-eyebrow-lines::after {
+    background-image: linear-gradient(to right, transparent, rgb(199 210 254 / 0.5));
+}
+
+.theme-eyebrow-lines::after {
+    background-image: linear-gradient(to left, transparent, rgb(199 210 254 / 0.5));
+}
+
+html[data-theme="light"] .theme-display-title {
+    background-image: linear-gradient(
+        to right,
+        #0f172a,
+        #334155,
+        #1e293b,
+        #475569,
+        #0f172a
+    );
+}
+
+html[data-theme="light"] .theme-eyebrow {
+    background-image: linear-gradient(to right, #4f46e5, #64748b);
+}
+
+html[data-theme="light"] .theme-eyebrow-lines::before {
+    background-image: linear-gradient(to right, transparent, rgb(148 163 184 / 0.45));
+}
+
+html[data-theme="light"] .theme-eyebrow-lines::after {
+    background-image: linear-gradient(to left, transparent, rgb(148 163 184 / 0.45));
+}
+
+.btn-secondary {
+    position: relative;
+    background-image: var(--site-secondary-btn-bg);
+    background-position: bottom;
+    background-size: 100% 100%;
+    color: var(--site-secondary-btn-text);
+}
+
+.btn-secondary:hover {
+    background-size: 100% 150%;
+}
+
+.form-input,
+.form-textarea,
+.form-multiselect,
+.form-select,
+.form-checkbox,
+.form-radio {
+    border-color: var(--site-field-border);
+    background: var(--site-field-bg);
+}
+
+.form-input,
+.form-textarea,
+.form-multiselect,
+.form-select {
+    color: var(--site-text);
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-multiselect:focus,
+.form-select:focus {
+    border-color: var(--site-field-focus);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: var(--site-subtle);
+}
+
+.section-divider {
+    border-top: 1px solid transparent;
+    border-image: var(--site-divider) 1;
+}
+
+.workflow-card {
+    background: var(--site-card-bg);
+}
+
+.workflow-card-inner {
+    background: var(--site-card-surface);
+}
+
+.workflow-card-inner::after {
+    position: absolute;
+    inset: 0;
+    background: var(--site-card-overlay);
+    content: "";
+}
+
+.workflow-arrow {
+    border: 1px solid var(--site-arrow-border);
+    background: var(--site-arrow-bg);
+    color: var(--site-heading);
+}
+
+.workflow-pill {
+    position: relative;
+    background: var(--site-pill-bg);
+}
+
+.workflow-pill::before {
+    background: var(--site-pill-border) border-box;
+}
+
+.testimonial-filter {
+    background: var(--site-filter-bg);
+}
+
+.testimonial-card {
+    position: relative;
+    background: var(--site-card-bg);
+}
+
+.cta-band {
+    background: var(--site-band);
+}
+
+html[data-theme="light"] .cta-shell {
+    color: var(--site-text);
+}
+
+html[data-theme="light"] .cta-shell > div {
+    background: var(--site-band);
+}
+
+html[data-theme="light"] .cta-secondary {
+    color: var(--site-secondary-btn-text);
+}
+
+html[data-theme="light"] .cta-secondary::before {
+    background: var(--site-secondary-btn-border) border-box !important;
+}
+
+html[data-theme="light"] .cta-secondary {
+    background-image: var(--site-secondary-btn-bg) !important;
+}
+
+.video-frame::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--site-video-frame);
+    content: "";
+}
+
+.video-play::before {
+    background: var(--site-play-bg);
+}

@@ -29,7 +29,7 @@ export default function ModalVideo({
   const videoRef = useRef<HTMLVideoElement>(null);
 
   return (
-    <div className="relative">
+    <div className="relative isolate">
       {/* Secondary illustration */}
       <div
         className="pointer-events-none absolute bottom-8 left-1/2 -z-10 -ml-28 -translate-x-1/2 translate-y-1/2"
@@ -54,7 +54,7 @@ export default function ModalVideo({
         data-aos="fade-up"
         data-aos-delay={200}
       >
-        <figure className="relative overflow-hidden rounded-2xl before:absolute before:inset-0 before:-z-10 before:bg-linear-to-br before:from-gray-900 before:via-indigo-500/20 before:to-gray-900">
+        <figure className="video-frame relative overflow-hidden rounded-2xl">
           <Image
             className="opacity-50 grayscale"
             src={thumb}
@@ -65,7 +65,7 @@ export default function ModalVideo({
           />
         </figure>
         {/* Play icon */}
-        <span className="pointer-events-none absolute p-2.5 before:absolute before:inset-0 before:rounded-full before:bg-gray-950 before:duration-300 group-hover:before:scale-110">
+        <span className="video-play pointer-events-none absolute p-2.5 before:absolute before:inset-0 before:rounded-full before:duration-300 group-hover:before:scale-110">
           <span className="relative flex items-center gap-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +95,7 @@ export default function ModalVideo({
             </svg>
             <span className="text-sm font-medium leading-tight text-gray-300">
               Watch Demo
-              <span className="text-gray-600"> - </span>
+              <span className="theme-separator"> - </span>
               3:47
             </span>
           </span>

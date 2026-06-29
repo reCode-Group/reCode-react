@@ -4,9 +4,8 @@ import FooterIllustration from "@/public/images/footer-illustration.svg";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="section-shell relative isolate">
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
-        {/* Footer illustration */}
         <div
           className="pointer-events-none absolute bottom-0 left-1/2 -z-10 -translate-x-1/2"
           aria-hidden="true"
@@ -20,197 +19,84 @@ export default function Footer() {
           />
         </div>
         <div className="grid grid-cols-2 justify-between gap-12 py-8 sm:grid-rows-[auto_auto] md:grid-cols-4 md:grid-rows-[auto_auto] md:py-12 lg:grid-cols-[repeat(4,minmax(0,140px))_1fr] lg:grid-rows-1 xl:gap-20">
-          {/* 1st block */}
           <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-200">Product</h3>
+            <h3 className="theme-heading text-sm font-medium">Product</h3>
             <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Features
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Integrations
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Pricing &amp; Plans
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Changelog
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Our method
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  User policy
-                </a>
-              </li>
+              {[
+                "Features",
+                "Integrations",
+                "Pricing & Plans",
+                "Changelog",
+                "Our method",
+                "User policy",
+              ].map((item) => (
+                <li key={item}>
+                  <a className="theme-link transition hover:text-indigo-500" href="#0">
+                    {item}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
-          {/* 2nd block */}
           <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-200">Company</h3>
+            <h3 className="theme-heading text-sm font-medium">Company</h3>
             <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  About us
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Diversity &amp; Inclusion
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Careers
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Financial statements
-                </a>
-              </li>
+              {[
+                "About us",
+                "Diversity & Inclusion",
+                "Blog",
+                "Careers",
+                "Financial statements",
+              ].map((item) => (
+                <li key={item}>
+                  <a className="theme-link transition hover:text-indigo-500" href="#0">
+                    {item}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
-          {/* 3rd block */}
           <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-200">Resources</h3>
+            <h3 className="theme-heading text-sm font-medium">Resources</h3>
             <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Community
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Terms of service
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Report a vulnerability
-                </a>
-              </li>
+              {["Community", "Terms of service", "Report a vulnerability"].map(
+                (item) => (
+                  <li key={item}>
+                    <a className="theme-link transition hover:text-indigo-500" href="#0">
+                      {item}
+                    </a>
+                  </li>
+                ),
+              )}
             </ul>
           </div>
-          {/* 4th block */}
           <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-200">
-              Content Library
-            </h3>
+            <h3 className="theme-heading text-sm font-medium">Content Library</h3>
             <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Templates
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Tutorials
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Knowledge base
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Learn
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Cookie manager
-                </a>
-              </li>
+              {[
+                "Templates",
+                "Tutorials",
+                "Knowledge base",
+                "Learn",
+                "Cookie manager",
+              ].map((item) => (
+                <li key={item}>
+                  <a className="theme-link transition hover:text-indigo-500" href="#0">
+                    {item}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
-          {/* 5th block */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1 lg:text-right">
             <div className="mb-3">
               <Logo />
             </div>
             <div className="text-sm">
-              <p className="mb-3 text-indigo-200/65">
+              <p className="theme-link mb-3">
                 © Cruip.com
-                <span className="text-gray-700"> · </span>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
+                <span className="theme-separator"> · </span>
+                <a className="theme-link transition hover:text-indigo-500" href="#0">
                   Terms
                 </a>
               </p>
