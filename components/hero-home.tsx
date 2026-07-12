@@ -1,4 +1,5 @@
 import ModalVideo from "@/components/modal-video";
+import SupportBanner from "@/components/ui/support-banner";
 import VideoThumb from "@/public/images/hero-image-01.jpg";
 import HeroMyOffice from "@/public/images/hero-myoffice.png";
 import HeroOffice2010 from "@/public/images/hero-office2010.png";
@@ -20,6 +21,10 @@ export default function HeroHome() {
       <div className="section-shell mx-auto max-w-6xl px-4 sm:px-6">
         {/* Hero content */}
         <div className="py-12 md:py-20">
+          <div className="pb-10 md:pb-14">
+            <SupportBanner />
+          </div>
+
           {/* Section header */}
           <div className="pb-12 text-center md:pb-20">
             <h1

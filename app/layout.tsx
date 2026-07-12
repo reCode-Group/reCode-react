@@ -3,7 +3,6 @@ import "./css/style.css";
 import { Roboto } from "next/font/google";
 
 import Header from "@/components/ui/header";
-import SupportBanner from "@/components/ui/support-banner";
 import { ThemeProvider, STORAGE_KEY } from "@/components/theme-provider";
 
 const roboto = Roboto({
@@ -35,7 +34,6 @@ export default function RootLayout({
           }}
         />
         <ThemeProvider>
-          <SupportBanner />
           <div className="site-shell flex min-h-screen flex-col overflow-hidden pt-24 md:pt-28 supports-[overflow:clip]:overflow-clip">
             <Header />
             {children}

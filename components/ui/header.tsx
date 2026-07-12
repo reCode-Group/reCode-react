@@ -69,7 +69,7 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="header-wrap fixed left-0 top-[124px] z-40 w-full md:top-[92px] xl:top-[96px]">
+    <header className="header-wrap fixed left-0 top-2 z-40 w-full md:top-5 xl:top-8">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="header-shell relative flex min-h-14 items-center gap-3 rounded-2xl px-3 py-2.5 md:px-5 md:py-4 xl:px-6 xl:py-[1.35rem] after:absolute after:inset-0 after:-z-10 after:backdrop-blur-lg">
           <div className="flex flex-1 items-center">

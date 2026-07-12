@@ -23,7 +23,7 @@ export default function Cta() {
               className="theme-display-title animate-[gradient_6s_linear_infinite] pb-8 font-nacelle text-3xl font-semibold md:text-4xl"
               data-aos="fade-up"
             >
-              Join the content-first platform
+              Переводите макросы для работы в российских офисных пакетах
             </h2>
             <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
               <div data-aos="fade-up" data-aos-delay={400}>
