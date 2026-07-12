@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useRef } from "react";
-import type { StaticImageData } from "next/image";
-import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
-import Image from "next/image";
 import SecondaryIllustration from "@/public/images/secondary-illustration.svg";
+import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
+import type { StaticImageData } from "next/image";
+import Image from "next/image";
+import { useRef, useState } from "react";
 
 interface ModalVideoProps {
   thumb: StaticImageData;
@@ -46,7 +46,7 @@ export default function ModalVideo({
 
       {/* Video thumbnail */}
       <button
-        className="group relative flex items-center justify-center rounded-2xl focus:outline-hidden focus-visible:ring-3 focus-visible:ring-indigo-200"
+        className="accent-focus group relative flex items-center justify-center rounded-2xl focus:outline-hidden"
         onClick={() => {
           setModalOpen(true);
         }}
@@ -88,15 +88,15 @@ export default function ModalVideo({
                   y2={20}
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stopColor="#6366F1" />
-                  <stop offset={1} stopColor="#6366F1" stopOpacity=".72" />
+                  <stop stopColor="#005de0" />
+                  <stop offset={1} stopColor="#005de0" stopOpacity=".72" />
                 </linearGradient>
               </defs>
             </svg>
-            <span className="text-sm font-medium leading-tight text-gray-300">
-              Watch Demo
+            <span className="text-sm font-medium leading-tight theme-muted">
+              Смотреть видео
               <span className="theme-separator"> - </span>
-              3:47
+              1:27
             </span>
           </span>
         </span>

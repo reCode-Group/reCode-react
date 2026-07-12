@@ -130,10 +130,10 @@ export default function Testimonials() {
                 ([label, id]) => (
                   <button
                     key={id}
-                    className={`flex h-8 flex-1 items-center gap-2.5 whitespace-nowrap rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-hidden focus-visible:ring-3 focus-visible:ring-indigo-200 ${
+                    className={`accent-focus flex h-8 flex-1 items-center gap-2.5 whitespace-nowrap rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-hidden ${
                       category === id
-                        ? "relative bg-linear-to-b from-gray-900 via-gray-800/60 to-gray-900 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-indigo-500/0),--theme(--color-indigo-500/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]"
-                        : "opacity-65 transition-opacity hover:opacity-90"
+                        ? "testimonial-pill-active relative"
+                        : "testimonial-pill-idle opacity-65 transition-opacity hover:opacity-90"
                     }`}
                     aria-pressed={category === id}
                     onClick={() => setCategory(Number(id))}
@@ -202,7 +202,7 @@ export function Testimonial({
             <span>{testimonial.name}</span>
             <span className="theme-separator"> - </span>
             <a
-              className="theme-link transition-colors hover:text-indigo-500"
+              className="theme-link accent-hover transition-colors"
               href="#0"
             >
               {testimonial.company}

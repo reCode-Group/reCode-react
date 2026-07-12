@@ -31,7 +31,7 @@ export default function Footer() {
                 "User policy",
               ].map((item) => (
                 <li key={item}>
-                  <a className="theme-link transition hover:text-indigo-500" href="#0">
+                  <a className="theme-link accent-hover transition" href="#0">
                     {item}
                   </a>
                 </li>
@@ -49,7 +49,7 @@ export default function Footer() {
                 "Financial statements",
               ].map((item) => (
                 <li key={item}>
-                  <a className="theme-link transition hover:text-indigo-500" href="#0">
+                  <a className="theme-link accent-hover transition" href="#0">
                     {item}
                   </a>
                 </li>
@@ -62,7 +62,7 @@ export default function Footer() {
               {["Community", "Terms of service", "Report a vulnerability"].map(
                 (item) => (
                   <li key={item}>
-                    <a className="theme-link transition hover:text-indigo-500" href="#0">
+                    <a className="theme-link accent-hover transition" href="#0">
                       {item}
                     </a>
                   </li>
@@ -81,7 +81,7 @@ export default function Footer() {
                 "Cookie manager",
               ].map((item) => (
                 <li key={item}>
-                  <a className="theme-link transition hover:text-indigo-500" href="#0">
+                  <a className="theme-link accent-hover transition" href="#0">
                     {item}
                   </a>
                 </li>
@@ -96,14 +96,14 @@ export default function Footer() {
               <p className="theme-link mb-3">
                 © Cruip.com
                 <span className="theme-separator"> · </span>
-                <a className="theme-link transition hover:text-indigo-500" href="#0">
+                <a className="theme-link accent-hover transition" href="#0">
                   Terms
                 </a>
               </p>
               <ul className="inline-flex gap-1">
                 <li>
                   <a
-                    className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
+                    className="accent-icon flex items-center justify-center transition"
                     href="#0"
                     aria-label="Twitter"
                   >
@@ -118,7 +118,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
+                    className="accent-icon flex items-center justify-center transition"
                     href="#0"
                     aria-label="Medium"
                   >
@@ -133,7 +133,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
+                    className="accent-icon flex items-center justify-center transition"
                     href="#0"
                     aria-label="Github"
                   >

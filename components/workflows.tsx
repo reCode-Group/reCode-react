@@ -29,7 +29,7 @@ export default function Workflows() {
           <Spotlight className="group mx-auto grid max-w-sm items-start gap-6 lg:max-w-none lg:grid-cols-3">
             {/* Card 1 */}
             <a
-              className="workflow-card group/card relative h-full overflow-hidden rounded-2xl p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-indigo-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-indigo-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 hover:after:opacity-20 group-hover:before:opacity-100"
+              className="workflow-card group/card relative h-full overflow-hidden rounded-2xl p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 hover:after:opacity-20 group-hover:before:opacity-100"
               href="#0"
             >
               <div className="workflow-card-inner relative z-20 h-full overflow-hidden rounded-[inherit]">
@@ -39,13 +39,13 @@ export default function Workflows() {
                   aria-hidden="true"
                 >
                   <svg
+                    className="fill-current"
                     xmlns="http://www.w3.org/2000/svg"
                     width={9}
                     height={8}
                     fill="none"
                   >
                     <path
-                      fill="#F4F4F5"
                       d="m4.92 8-.787-.763 2.733-2.68H0V3.443h6.866L4.133.767 4.92 0 9 4 4.92 8Z"
                     />
                   </svg>
@@ -61,8 +61,8 @@ export default function Workflows() {
                 {/* Content */}
                 <div className="p-6">
                   <div className="mb-3">
-                    <span className="workflow-pill btn-sm relative rounded-full px-2.5 py-0.5 text-xs font-normal">
-                      <span className="theme-eyebrow">
+                    <span className="workflow-pill btn-sm relative rounded-full px-4 py-1.5 text-base font-medium">
+                      <span className="workflow-pill-label">
                         Built-in Tools
                       </span>
                     </span>
@@ -76,7 +76,7 @@ export default function Workflows() {
             </a>
             {/* Card 2 */}
             <a
-              className="workflow-card group/card relative h-full overflow-hidden rounded-2xl p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-indigo-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-indigo-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 hover:after:opacity-20 group-hover:before:opacity-100"
+              className="workflow-card group/card relative h-full overflow-hidden rounded-2xl p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 hover:after:opacity-20 group-hover:before:opacity-100"
               href="#0"
             >
               <div className="workflow-card-inner relative z-20 h-full overflow-hidden rounded-[inherit]">
@@ -86,13 +86,13 @@ export default function Workflows() {
                   aria-hidden="true"
                 >
                   <svg
+                    className="fill-current"
                     xmlns="http://www.w3.org/2000/svg"
                     width={9}
                     height={8}
                     fill="none"
                   >
                     <path
-                      fill="#F4F4F5"
                       d="m4.92 8-.787-.763 2.733-2.68H0V3.443h6.866L4.133.767 4.92 0 9 4 4.92 8Z"
                     />
                   </svg>
@@ -108,8 +108,8 @@ export default function Workflows() {
                 {/* Content */}
                 <div className="p-6">
                   <div className="mb-3">
-                    <span className="workflow-pill btn-sm relative rounded-full px-2.5 py-0.5 text-xs font-normal">
-                      <span className="theme-eyebrow">
+                    <span className="workflow-pill btn-sm relative rounded-full px-4 py-1.5 text-base font-medium">
+                      <span className="workflow-pill-label">
                         Scale Instantly
                       </span>
                     </span>
@@ -123,7 +123,7 @@ export default function Workflows() {
             </a>
             {/* Card 3 */}
             <a
-              className="workflow-card group/card relative h-full overflow-hidden rounded-2xl p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-indigo-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-indigo-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 hover:after:opacity-20 group-hover:before:opacity-100"
+              className="workflow-card group/card relative h-full overflow-hidden rounded-2xl p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 hover:after:opacity-20 group-hover:before:opacity-100"
               href="#0"
             >
               <div className="workflow-card-inner relative z-20 h-full overflow-hidden rounded-[inherit]">
@@ -133,13 +133,13 @@ export default function Workflows() {
                   aria-hidden="true"
                 >
                   <svg
+                    className="fill-current"
                     xmlns="http://www.w3.org/2000/svg"
                     width={9}
                     height={8}
                     fill="none"
                   >
                     <path
-                      fill="#F4F4F5"
                       d="m4.92 8-.787-.763 2.733-2.68H0V3.443h6.866L4.133.767 4.92 0 9 4 4.92 8Z"
                     />
                   </svg>
@@ -155,8 +155,8 @@ export default function Workflows() {
                 {/* Content */}
                 <div className="p-6">
                   <div className="mb-3">
-                    <span className="workflow-pill btn-sm relative rounded-full px-2.5 py-0.5 text-xs font-normal">
-                      <span className="theme-eyebrow">
+                    <span className="workflow-pill btn-sm relative rounded-full px-4 py-1.5 text-base font-medium">
+                      <span className="workflow-pill-label">
                         Tailored Flows
                       </span>
                     </span>

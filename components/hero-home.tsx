@@ -1,5 +1,5 @@
-import VideoThumb from "@/public/images/hero-image-01.jpg";
 import ModalVideo from "@/components/modal-video";
+import VideoThumb from "@/public/images/hero-image-01.jpg";
 
 export default function HeroHome() {
   return (
@@ -10,28 +10,30 @@ export default function HeroHome() {
           {/* Section header */}
           <div className="pb-12 text-center md:pb-20">
             <h1
-              className="theme-display-title animate-[gradient_6s_linear_infinite] pb-5 font-nacelle text-4xl font-semibold md:text-5xl"
+              className="theme-display-title pb-5 animate-[gradient_6s_linear_infinite] font-nacelle text-4xl font-semibold md:text-5xl"
               data-aos="fade-up"
             >
-              AI-driven tools for product teams
+              Автоматический перевод<br/>
+							в один клик
             </h1>
             <div className="mx-auto max-w-3xl">
               <p
-                className="theme-muted mb-8 text-xl"
+                className="theme-muted mb-8 text-md"
                 data-aos="fade-up"
                 data-aos-delay={200}
               >
-                Our landing page template works on all devices, so you only have
-                to set it up once, and get beautiful results forever.
+                Сохраняйте ценные инструменты автоматизации при переходе на российские офисные пакеты.
+Рекод - это онлайн-сервис для автоматизированного перевода макросов под российские офисные пакеты.
+Всё работает в облаке - ничего не нужно устанавливать.
               </p>
               <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
                 <div data-aos="fade-up" data-aos-delay={400}>
                   <a
-                    className="btn group mb-4 w-full bg-linear-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
+                    className="btn btn-primary group mb-4 w-full sm:mb-0 sm:w-auto"
                     href="#0"
                   >
                     <span className="relative inline-flex items-center">
-                      Start Building
+                      Начать работу
                       <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
                         -&gt;
                       </span>
@@ -40,7 +42,7 @@ export default function HeroHome() {
                 </div>
                 <div data-aos="fade-up" data-aos-delay={600}>
                   <a className="btn btn-secondary w-full sm:ml-4 sm:w-auto" href="#0">
-                    Schedule Demo
+                    Смотреть возможности
                   </a>
                 </div>
               </div>

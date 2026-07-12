@@ -15,7 +15,7 @@ export default function PageIllustration({
         aria-hidden="true"
       >
         <Image
-          className="max-w-none"
+          className="max-w-none animate-[illustration-float_18s_ease-in-out_infinite] will-change-transform"
           src={Illustration}
           width={846}
           height={594}
@@ -29,7 +29,7 @@ export default function PageIllustration({
             aria-hidden="true"
           >
             <Image
-              className="max-w-none"
+              className="theme-gray-blur max-w-none"
               src={BlurredShapeGray}
               width={760}
               height={668}

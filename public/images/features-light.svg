@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1104" height="384" viewBox="0 0 1104 384" fill="none">
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F3F8FF"/>
+    </linearGradient>
+    <linearGradient id="chip" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F9FBFF"/>
+      <stop offset="1" stop-color="#E7F1FF"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4DA3FF"/>
+      <stop offset="1" stop-color="#005DE0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(552 192) rotate(90) scale(152 212)">
+      <stop offset="0" stop-color="#7FBCFF" stop-opacity=".58"/>
+      <stop offset=".58" stop-color="#2E86F0" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#2E86F0" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="353" y="88" width="398" height="208" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feGaussianBlur in="BackgroundImageFix" stdDeviation="12"/>
+      <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="14"/>
+      <feGaussianBlur stdDeviation="20"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.0313726 0 0 0 0 0.203922 0 0 0 0 0.501961 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="effect1_backgroundBlur_1" result="effect2_dropShadow_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_1" result="shape"/>
+    </filter>
+    <filter id="cardShadow" x="291" y="131" width="244" height="122" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feGaussianBlur in="BackgroundImageFix" stdDeviation="8"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="10"/>
+      <feGaussianBlur stdDeviation="18"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.0313726 0 0 0 0 0.203922 0 0 0 0 0.501961 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1" result="shape"/>
+    </filter>
+    <filter id="cardShadowRight" x="569" y="131" width="244" height="122" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feGaussianBlur in="BackgroundImageFix" stdDeviation="8"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="10"/>
+      <feGaussianBlur stdDeviation="18"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.0313726 0 0 0 0 0.203922 0 0 0 0 0.501961 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1" result="shape"/>
+    </filter>
+  </defs>
+
+  <rect width="1104" height="384" rx="24" fill="none"/>
+  <ellipse cx="552" cy="192" rx="212" ry="152" fill="url(#glow)"/>
+
+  <path d="M132 192H972" stroke="#7BADEB" stroke-opacity=".4" stroke-dasharray="6 8"/>
+  <path d="M378 94C326 94 290 128 290 190C290 252 326 286 378 286" stroke="#9CBFF1" stroke-width="2.5" stroke-dasharray="7 9"/>
+  <path d="M726 94C778 94 814 128 814 190C814 252 778 286 726 286" stroke="#9CBFF1" stroke-width="2.5" stroke-dasharray="7 9"/>
+  <path d="M378 94C454 94 492 131 492 192" stroke="#9CBFF1" stroke-opacity=".65" stroke-width="2.5" stroke-dasharray="7 9"/>
+  <path d="M726 94C650 94 612 131 612 192" stroke="#9CBFF1" stroke-opacity=".65" stroke-width="2.5" stroke-dasharray="7 9"/>
+  <path d="M378 286C454 286 492 249 492 192" stroke="#9CBFF1" stroke-opacity=".65" stroke-width="2.5" stroke-dasharray="7 9"/>
+  <path d="M726 286C650 286 612 249 612 192" stroke="#9CBFF1" stroke-opacity=".65" stroke-width="2.5" stroke-dasharray="7 9"/>
+
+  <g filter="url(#softShadow)">
+    <rect x="480" y="112" width="144" height="160" rx="34" fill="url(#panel)"/>
+    <rect x="481.25" y="113.25" width="141.5" height="157.5" rx="32.75" stroke="#D4E6FF" stroke-width="2.5"/>
+  </g>
+
+  <g filter="url(#cardShadow)">
+    <rect x="331" y="157" width="164" height="70" rx="24" fill="url(#panel)"/>
+    <rect x="332.25" y="158.25" width="161.5" height="67.5" rx="22.75" stroke="#DCEBFF" stroke-width="2.5"/>
+    <rect x="344" y="169" width="138" height="46" rx="15" fill="#EAF2FF"/>
+    <text x="413" y="197" fill="#61708C" font-family="Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="4">PROTOTYPE</text>
+  </g>
+
+  <g filter="url(#cardShadowRight)">
+    <rect x="609" y="157" width="164" height="70" rx="24" fill="url(#panel)"/>
+    <rect x="610.25" y="158.25" width="161.5" height="67.5" rx="22.75" stroke="#DCEBFF" stroke-width="2.5"/>
+    <rect x="622" y="169" width="138" height="46" rx="15" fill="#EAF2FF"/>
+    <text x="679" y="197" fill="#61708C" font-family="Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="4">PROJECTS</text>
+  </g>
+
+  <rect x="355" y="50" width="146" height="52" rx="16" fill="url(#chip)"/>
+  <rect x="356.25" y="51.25" width="143.5" height="49.5" rx="14.75" stroke="#D9E9FF" stroke-width="2.5"/>
+  <text x="424" y="82" fill="#6D7B96" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="4">PLAN</text>
+
+  <rect x="698" y="294" width="154" height="58" rx="16" fill="url(#chip)"/>
+  <rect x="699.25" y="295.25" width="151.5" height="55.5" rx="14.75" stroke="#D9E9FF" stroke-width="2.5"/>
+  <text x="758" y="329" fill="#6D7B96" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="4">EXECUTE</text>
+
+  <rect x="516" y="147" width="72" height="90" rx="20" fill="url(#core)"/>
+  <rect x="516" y="147" width="72" height="90" rx="20" fill="url(#core)"/>
+  <path d="M552 165L570 183L552 201L534 183L552 165Z" fill="#9CC8FF"/>
+  <path d="M542 173H562V193H542V173Z" fill="#224B93"/>
+
+  <circle cx="553" cy="83" r="4" fill="#AFCFFF"/>
+  <circle cx="701" cy="160" r="7" fill="#D5E7FF"/>
+  <circle cx="673" cy="257" r="4.5" fill="#B9D7FF"/>
+  <circle cx="462" cy="257" r="7" fill="#B9D7FF"/>
+  <circle cx="406" cy="226" r="5.5" fill="#D5E7FF"/>
+  <circle cx="506" cy="126" r="4.5" fill="#D5E7FF"/>
+  <circle cx="627" cy="119" r="4.5" fill="#D5E7FF"/>
+  <circle cx="628" cy="191" r="3.5" fill="#D5E7FF"/>
+  <circle cx="550" cy="319" r="3.5" fill="#D5E7FF"/>
+
+  <g>
+    <circle cx="392" cy="278" r="28" fill="#E4ECF8"/>
+    <circle cx="392" cy="269" r="10" fill="#A2AFC4"/>
+    <path d="M376 299C379 289 386 284 392 284C398 284 405 289 408 299" fill="#A2AFC4"/>
+  </g>
+  <g>
+    <circle cx="718" cy="161" r="31" fill="#E4ECF8"/>
+    <circle cx="718" cy="151" r="11" fill="#A2AFC4"/>
+    <path d="M700 184C704 173 712 168 718 168C724 168 732 173 736 184" fill="#A2AFC4"/>
+  </g>
+  <g>
+    <circle cx="497" cy="124" r="22" fill="#EEF4FD"/>
+    <circle cx="497" cy="117" r="8" fill="#9DAABF"/>
+    <path d="M485 140C487 132 492 128 497 128C502 128 507 132 509 140" fill="#9DAABF"/>
+  </g>
+  <g>
+    <circle cx="657" cy="305" r="21" fill="#EEF4FD"/>
+    <circle cx="657" cy="298" r="7.5" fill="#9DAABF"/>
+    <path d="M646 320C648 313 652 309 657 309C662 309 666 313 668 320" fill="#9DAABF"/>
+  </g>
+  <g>
+    <circle cx="286" cy="227" r="15" fill="#EEF4FD"/>
+    <circle cx="286" cy="222" r="5.5" fill="#9DAABF"/>
+    <path d="M278 238C279 233 283 230 286 230C289 230 293 233 294 238" fill="#9DAABF"/>
+  </g>
+  <g>
+    <circle cx="811" cy="251" r="12" fill="#EEF4FD"/>
+    <circle cx="811" cy="247" r="4.5" fill="#9DAABF"/>
+    <path d="M805 260C806 256 808 254 811 254C814 254 816 256 817 260" fill="#9DAABF"/>
+  </g>
+  <g>
+    <circle cx="829" cy="98" r="16" fill="#EEF4FD"/>
+    <circle cx="829" cy="93" r="6" fill="#9DAABF"/>
+    <path d="M820 110C822 104 825 101 829 101C833 101 836 104 838 110" fill="#9DAABF"/>
+  </g>
+  <g>
+    <circle cx="306" cy="121" r="10" fill="#EEF4FD"/>
+    <circle cx="306" cy="118" r="3.75" fill="#9DAABF"/>
+    <path d="M301 130C302 126 304 124 306 124C308 124 310 126 311 130" fill="#9DAABF"/>
+  </g>
+</svg>

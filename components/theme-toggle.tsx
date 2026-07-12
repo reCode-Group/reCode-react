@@ -10,9 +10,9 @@ export default function ThemeToggle() {
     <button
       type="button"
       onClick={toggleTheme}
-      className={`relative inline-flex h-9 w-[4.5rem] items-center rounded-full border px-1 transition-colors ${
+        className={`relative inline-flex h-9 w-[4.5rem] items-center rounded-full border px-1 transition-colors ${
         isLight
-          ? "border-indigo-200 bg-white/90 text-slate-700 shadow-[0_12px_30px_rgba(15,23,42,0.08)]"
+          ? "border-sky-200 bg-white/90 text-slate-700 shadow-[0_12px_30px_rgba(15,23,42,0.08)]"
           : "border-gray-700/80 bg-gray-900/90 text-gray-200"
       }`}
       aria-label={
@@ -23,7 +23,7 @@ export default function ThemeToggle() {
       <span
         className={`absolute h-7 w-7 rounded-full transition-transform ${
           isLight
-            ? "translate-x-8 bg-indigo-500"
+            ? "translate-x-8 bg-[var(--site-accent)]"
             : "translate-x-0 bg-gray-700"
         }`}
       />

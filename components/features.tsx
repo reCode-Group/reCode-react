@@ -2,6 +2,7 @@ import Image from "next/image";
 import BlurredShapeGray from "@/public/images/blurred-shape-gray.svg";
 import BlurredShape from "@/public/images/blurred-shape.svg";
 import FeaturesImage from "@/public/images/features.png";
+import FeaturesImageLight from "@/public/images/features-light.svg";
 
 export default function Features() {
   return (
@@ -11,7 +12,7 @@ export default function Features() {
         aria-hidden="true"
       >
         <Image
-          className="max-w-none"
+          className="theme-gray-blur max-w-none"
           src={BlurredShapeGray}
           width={760}
           height={668}
@@ -50,8 +51,15 @@ export default function Features() {
           </div>
           <div className="flex justify-center pb-4 md:pb-12" data-aos="fade-up">
             <Image
-              className="max-w-none"
+              className="theme-dark-only max-w-none"
               src={FeaturesImage}
+              width={1104}
+              height={384}
+              alt="Features"
+            />
+            <Image
+              className="theme-light-only max-w-none"
+              src={FeaturesImageLight}
               width={1104}
               height={384}
               alt="Features"
@@ -61,7 +69,7 @@ export default function Features() {
           <div className="mx-auto grid max-w-sm gap-12 sm:max-w-none sm:grid-cols-2 md:gap-x-14 md:gap-y-16 lg:grid-cols-3">
             <article>
               <svg
-                className="mb-3 fill-indigo-500"
+                className="accent-fill mb-3"
                 xmlns="http://www.w3.org/2000/svg"
                 width={24}
                 height={24}
@@ -82,7 +90,7 @@ export default function Features() {
             </article>
             <article>
               <svg
-                className="mb-3 fill-indigo-500"
+                className="accent-fill mb-3"
                 xmlns="http://www.w3.org/2000/svg"
                 width={24}
                 height={24}
@@ -100,7 +108,7 @@ export default function Features() {
             </article>
             <article>
               <svg
-                className="mb-3 fill-indigo-500"
+                className="accent-fill mb-3"
                 xmlns="http://www.w3.org/2000/svg"
                 width={24}
                 height={24}
@@ -121,7 +129,7 @@ export default function Features() {
             </article>
             <article>
               <svg
-                className="mb-3 fill-indigo-500"
+                className="accent-fill mb-3"
                 xmlns="http://www.w3.org/2000/svg"
                 width={24}
                 height={24}
@@ -147,7 +155,7 @@ export default function Features() {
             </article>
             <article>
               <svg
-                className="mb-3 fill-indigo-500"
+                className="accent-fill mb-3"
                 xmlns="http://www.w3.org/2000/svg"
                 width={24}
                 height={24}
@@ -168,7 +176,7 @@ export default function Features() {
             </article>
             <article>
               <svg
-                className="mb-3 fill-indigo-500"
+                className="accent-fill mb-3"
                 xmlns="http://www.w3.org/2000/svg"
                 width={24}
                 height={24}
