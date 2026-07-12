@@ -76,7 +76,7 @@ export default function Header() {
             <Logo priority />
           </div>
 
-          <nav className="hidden items-center gap-6 lg:flex xl:gap-8">
+          <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-6 lg:flex xl:gap-8">
             {primaryItemsBeforeResources.map((item) => (
               <HeaderLink key={item.label} {...item} />
             ))}
@@ -126,7 +126,7 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="ml-auto hidden items-center gap-3 lg:flex">
+          <div className="ml-auto hidden flex-1 items-center justify-end gap-3 lg:flex">
             <ThemeToggle />
             <Link href="/signin" className="header-cta btn-sm">
               Личный кабинет

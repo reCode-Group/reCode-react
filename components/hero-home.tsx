@@ -1,6 +1,6 @@
 import ModalVideo from "@/components/modal-video";
 import SupportBanner from "@/components/ui/support-banner";
-import VideoThumb from "@/public/images/hero-image-01.jpg";
+import VideoThumb from "@/public/images/hero-image-02.png";
 import HeroMyOffice from "@/public/images/hero-myoffice.png";
 import HeroOffice2010 from "@/public/images/hero-office2010.png";
 import HeroOffice2016 from "@/public/images/hero-office2016.png";
@@ -89,7 +89,7 @@ export default function HeroHome() {
                       className="max-h-12 w-auto object-contain md:max-h-14"
                     />
                   </div>
-                  <p className="mt-3 text-[14px] font-medium leading-[1.25] text-slate-700 dark:text-slate-200 md:text-[15px]">
+                  <p className="mt-6 text-[14px] font-medium leading-[1.25] theme-muted md:text-[15px]">
                     {item.title}
                   </p>
                 </div>

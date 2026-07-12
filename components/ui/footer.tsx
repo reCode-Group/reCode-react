@@ -8,7 +8,7 @@ import Logo from "./logo";
 export default function Footer() {
   return (
     <footer className="section-shell relative isolate">
-      <div className="relative mx-auto max-w-6xl pt-4 pb-6 sm:pt-6 sm:pb-10">
+      <div className="relative mx-auto max-w-6xl px-4 pt-4 pb-6 sm:px-6 sm:pt-6 sm:pb-10">
         <div
           className="pointer-events-none absolute bottom-0 left-1/2 -z-10 -translate-x-1/2"
           aria-hidden="true"

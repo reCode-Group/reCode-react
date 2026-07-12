@@ -8,6 +8,7 @@ import Faq from "@/components/faq";
 import Features from "@/components/features";
 import Hero from "@/components/hero-home";
 import PageIllustration from "@/components/page-illustration";
+import Pricing from "@/components/pricing";
 import Testimonials from "@/components/testimonials";
 import Workflows from "@/components/workflows";
 
@@ -19,6 +20,7 @@ export default function Home() {
       <Workflows />
       <Features />
       <Testimonials />
+      <Pricing />
       <Faq />
       <Cta />
     </>

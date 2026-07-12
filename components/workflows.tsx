@@ -1,8 +1,8 @@
-import Image from "next/image";
+import Spotlight from "@/components/spotlight";
 import WorflowImg01 from "@/public/images/workflow-01.png";
 import WorflowImg02 from "@/public/images/workflow-02.png";
 import WorflowImg03 from "@/public/images/workflow-03.png";
-import Spotlight from "@/components/spotlight";
+import Image from "next/image";
 
 export default function Workflows() {
   return (
@@ -13,16 +13,15 @@ export default function Workflows() {
           <div className="mx-auto max-w-3xl pb-12 text-center md:pb-20">
             <div className="theme-eyebrow-lines inline-flex items-center gap-3 pb-3 before:h-px before:w-8 after:h-px after:w-8">
               <span className="theme-eyebrow inline-flex">
-                Tailored Workflows
+                Рабочие процессы
               </span>
             </div>
             <h2 className="theme-display-title animate-[gradient_6s_linear_infinite] pb-4 font-nacelle text-3xl font-semibold md:text-4xl">
-              Map your product journey
+              Как всё устроено?
             </h2>
             <p className="theme-muted text-lg">
-              Simple and elegant interface to start collaborating with your team
-              in minutes. It seamlessly integrates with your code and your
-              favorite programming languages.
+              Три ключевых этапа работы с переводом макросов: от управления доступом и тарифом до
+  перевода, редактирования и контроля ресурсов.
             </p>
           </div>
           {/* Spotlight items */}
@@ -53,7 +52,7 @@ export default function Workflows() {
                 {/* Image */}
                 <Image
                   className="inline-flex"
-                  src={WorflowImg01}
+                  src={WorflowImg03}
                   width={350}
                   height={288}
                   alt="Workflow 01"
@@ -63,13 +62,13 @@ export default function Workflows() {
                   <div className="mb-3">
                     <span className="workflow-pill btn-sm relative rounded-full px-4 py-1.5 text-base font-medium">
                       <span className="workflow-pill-label">
-                        Built-in Tools
+                        Личный кабинет
                       </span>
                     </span>
                   </div>
                   <p className="theme-muted">
-                    Streamline the product development flow with a content
-                    platform that's aligned across specs and insights.
+                    В личном кабинете вы управляете аккаунтом, приобретаете тариф и контролируете доступный
+     функционал.
                   </p>
                 </div>
               </div>
@@ -100,7 +99,7 @@ export default function Workflows() {
                 {/* Image */}
                 <Image
                   className="inline-flex"
-                  src={WorflowImg02}
+                  src={WorflowImg01}
                   width={350}
                   height={288}
                   alt="Workflow 02"
@@ -110,13 +109,13 @@ export default function Workflows() {
                   <div className="mb-3">
                     <span className="workflow-pill btn-sm relative rounded-full px-4 py-1.5 text-base font-medium">
                       <span className="workflow-pill-label">
-                        Scale Instantly
+                        Переводчик макросов
                       </span>
                     </span>
                   </div>
                   <p className="theme-muted">
-                    Streamline the product development flow with a content
-                    platform that's aligned across specs and insights.
+                    Вставляйте исходный код, переводите макросы в нужный формат и дорабатывайте их в
+     конструкторе.
                   </p>
                 </div>
               </div>
@@ -147,7 +146,7 @@ export default function Workflows() {
                 {/* Image */}
                 <Image
                   className="inline-flex"
-                  src={WorflowImg03}
+                  src={WorflowImg02}
                   width={350}
                   height={288}
                   alt="Workflow 03"
@@ -157,13 +156,12 @@ export default function Workflows() {
                   <div className="mb-3">
                     <span className="workflow-pill btn-sm relative rounded-full px-4 py-1.5 text-base font-medium">
                       <span className="workflow-pill-label">
-                        Tailored Flows
+                        Тарифы и токены 
                       </span>
                     </span>
                   </div>
                   <p className="theme-muted">
-                    Streamline the product development flow with a content
-                    platform that's aligned across specs and insights.
+                    Выбирайте подходящий тариф под необходимый функционал, задачи команды и объем перевода.
                   </p>
                 </div>
               </div>
