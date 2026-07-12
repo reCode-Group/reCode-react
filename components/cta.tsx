@@ -32,7 +32,7 @@ export default function Cta() {
                   href="#0"
                 >
                   <span className="relative inline-flex items-center">
-                    Начать работу
+                    НАЧАТЬ РАБОТУ
                     <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
                       -&gt;
                     </span>
@@ -44,7 +44,7 @@ export default function Cta() {
                   className="cta-secondary btn theme-muted hover:bg-[length:100%_150%] w-full sm:ml-4 sm:w-auto"
                   href="#0"
                 >
-                  Смотреть возможности
+                  СМОТРЕТЬ ВОЗМОЖНОСТИ
                 </a>
               </div>
             </div>

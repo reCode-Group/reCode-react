@@ -1,41 +1,16 @@
 import "./css/style.css";
 
-import { Inter } from "next/font/google";
-import localFont from "next/font/local";
+import { Roboto } from "next/font/google";
 
 import Header from "@/components/ui/header";
+import SupportBanner from "@/components/ui/support-banner";
 import { ThemeProvider, STORAGE_KEY } from "@/components/theme-provider";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const nacelle = localFont({
-  src: [
-    {
-      path: "../public/fonts/nacelle-regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/nacelle-italic.woff2",
-      weight: "400",
-      style: "italic",
-    },
-    {
-      path: "../public/fonts/nacelle-semibold.woff2",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/nacelle-semibolditalic.woff2",
-      weight: "600",
-      style: "italic",
-    },
-  ],
-  variable: "--font-nacelle",
+const roboto = Roboto({
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "500", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-roboto",
   display: "swap",
 });
 
@@ -52,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="ru" data-theme="dark" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${nacelle.variable} font-inter text-base antialiased`}
+        className={`${roboto.variable} font-inter text-base antialiased`}
       >
         <script
           dangerouslySetInnerHTML={{
@@ -60,7 +35,8 @@ export default function RootLayout({
           }}
         />
         <ThemeProvider>
-          <div className="site-shell flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
+          <SupportBanner />
+          <div className="site-shell flex min-h-screen flex-col overflow-hidden pt-24 md:pt-28 supports-[overflow:clip]:overflow-clip">
             <Header />
             {children}
           </div>

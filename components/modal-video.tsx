@@ -4,7 +4,7 @@ import SecondaryIllustration from "@/public/images/secondary-illustration.svg";
 import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import type { StaticImageData } from "next/image";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface ModalVideoProps {
   thumb: StaticImageData;
@@ -26,10 +26,63 @@ export default function ModalVideo({
   videoHeight,
 }: ModalVideoProps) {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
+  const [scale, setScale] = useState(1);
+  const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+    const reducedMotionQuery = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    );
+    let frameId = 0;
+
+    const updateScale = () => {
+      if (!containerRef.current || !mediaQuery.matches || reducedMotionQuery.matches) {
+        setScale(1);
+        return;
+      }
+
+      const rect = containerRef.current.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+      const start = viewportHeight * 0.92;
+      const end = viewportHeight * 0.38;
+      const rawProgress = (start - rect.top) / (start - end);
+      const progress = Math.min(1, Math.max(0, rawProgress));
+      const nextScale = 0.7 + progress * 0.3;
+
+      setScale((current) =>
+        Math.abs(current - nextScale) < 0.001 ? current : nextScale,
+      );
+    };
+
+    const requestUpdate = () => {
+      if (frameId) return;
+      frameId = window.requestAnimationFrame(() => {
+        frameId = 0;
+        updateScale();
+      });
+    };
+
+    updateScale();
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
+    mediaQuery.addEventListener("change", requestUpdate);
+    reducedMotionQuery.addEventListener("change", requestUpdate);
+
+    return () => {
+      if (frameId) {
+        window.cancelAnimationFrame(frameId);
+      }
+      window.removeEventListener("scroll", requestUpdate);
+      window.removeEventListener("resize", requestUpdate);
+      mediaQuery.removeEventListener("change", requestUpdate);
+      reducedMotionQuery.removeEventListener("change", requestUpdate);
+    };
+  }, []);
+
   return (
-    <div className="relative isolate">
+    <div ref={containerRef} className="relative isolate">
       {/* Secondary illustration */}
       <div
         className="pointer-events-none absolute bottom-8 left-1/2 -z-10 -ml-28 -translate-x-1/2 translate-y-1/2"
@@ -54,7 +107,10 @@ export default function ModalVideo({
         data-aos="fade-up"
         data-aos-delay={200}
       >
-        <figure className="video-frame relative overflow-hidden rounded-2xl">
+        <figure
+          className="video-frame video-frame-animated relative overflow-hidden rounded-2xl"
+          style={{ transform: `scale(${scale})` }}
+        >
           <Image
             className="opacity-50 grayscale"
             src={thumb}

@@ -1,8 +1,8 @@
-import Image from "next/image";
 import BlurredShapeGray from "@/public/images/blurred-shape-gray.svg";
 import BlurredShape from "@/public/images/blurred-shape.svg";
-import FeaturesImage from "@/public/images/features.png";
 import FeaturesImageLight from "@/public/images/features-light.svg";
+import FeaturesImage from "@/public/images/features.png";
+import Image from "next/image";
 
 export default function Features() {
   return (
@@ -41,7 +41,7 @@ export default function Features() {
               </span>
             </div>
             <h2 className="theme-display-title animate-[gradient_6s_linear_infinite] pb-4 font-nacelle text-3xl font-semibold md:text-4xl">
-              Built for modern product teams
+              Возможности платформы Рекод
             </h2>
             <p className="theme-muted text-lg">
               Open AI reads and understands your files, and with nothing more

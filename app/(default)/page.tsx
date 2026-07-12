@@ -4,6 +4,7 @@ export const metadata = {
 };
 
 import Cta from "@/components/cta";
+import Faq from "@/components/faq";
 import Features from "@/components/features";
 import Hero from "@/components/hero-home";
 import PageIllustration from "@/components/page-illustration";
@@ -18,6 +19,7 @@ export default function Home() {
       <Workflows />
       <Features />
       <Testimonials />
+      <Faq />
       <Cta />
     </>
   );
