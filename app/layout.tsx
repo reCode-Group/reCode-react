@@ -3,7 +3,11 @@ import "./css/style.css";
 import { Roboto } from "next/font/google";
 
 import Header from "@/components/ui/header";
-import { ThemeProvider, STORAGE_KEY } from "@/components/theme-provider";
+import {
+  DEFAULT_THEME,
+  ThemeProvider,
+  STORAGE_KEY,
+} from "@/components/theme-provider";
 
 const roboto = Roboto({
   subsets: ["latin", "cyrillic"],
@@ -24,13 +28,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ru" data-theme="dark" suppressHydrationWarning>
+    <html lang="ru" data-theme={DEFAULT_THEME} suppressHydrationWarning>
       <body
         className={`${roboto.variable} font-inter text-base antialiased`}
       >
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var theme=localStorage.getItem('${STORAGE_KEY}')==='light'?'light':'dark';document.documentElement.dataset.theme=theme;document.documentElement.style.colorScheme=theme;}catch(e){document.documentElement.dataset.theme='dark';document.documentElement.style.colorScheme='dark';}})();`,
+            __html: `(function(){try{var raw=localStorage.getItem('${STORAGE_KEY}');var theme=raw==='dark'?'dark':'light';document.documentElement.dataset.theme=theme;document.documentElement.style.colorScheme=theme;}catch(e){document.documentElement.dataset.theme='${DEFAULT_THEME}';document.documentElement.style.colorScheme='${DEFAULT_THEME}';}})();`,
           }}
         />
         <ThemeProvider>

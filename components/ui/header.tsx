@@ -14,7 +14,6 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 
-import ThemeToggle from "@/components/theme-toggle";
 import Logo from "./logo";
 
 type NavItem = {
@@ -24,7 +23,7 @@ type NavItem = {
 };
 
 const primaryItemsBeforeResources: NavItem[] = [
-  { href: "#hero", label: "О ПРОЕКТЕ" },
+  { href: "/#hero", label: "О ПРОЕКТЕ" },
   {
     href: "https://app.recode-group.ru/translator",
     label: "ПЕРЕВОДЧИК",
@@ -137,14 +136,12 @@ export default function Header() {
           </nav>
 
           <div className="ml-auto hidden flex-1 items-center justify-end gap-3 lg:flex">
-            <ThemeToggle />
             <Link href="https://app.recode-group.ru" className="header-cta btn-sm">
               Личный кабинет
             </Link>
           </div>
 
           <div className="ml-auto flex items-center gap-2 lg:hidden">
-            <ThemeToggle />
             <button
               type="button"
               className="header-burger accent-focus inline-flex h-10 w-10 items-center justify-center rounded-xl focus-visible:outline-hidden"

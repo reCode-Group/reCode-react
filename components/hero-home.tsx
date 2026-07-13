@@ -1,6 +1,6 @@
 import ModalVideo from "@/components/modal-video";
 import SupportBanner from "@/components/ui/support-banner";
-import VideoThumb from "@/public/images/hero-image-02.png";
+import VideoThumb from "@/public/images/hero-image-03.png";
 import HeroMyOffice from "@/public/images/hero-myoffice.png";
 import HeroOffice2010 from "@/public/images/hero-office2010.png";
 import HeroOffice2016 from "@/public/images/hero-office2016.png";

@@ -7,12 +7,12 @@ import Link from "next/link";
 import Logo from "./logo";
 
 const platformLinks = [
-  { href: "#hero", label: "О проекте" },
-  { href: "#features", label: "Преимущества" },
-  { href: "#pricing", label: "Тарифы и цены" },
-  { href: "#faq", label: "Часто задаваемые вопросы" },
+  { href: "/#hero", label: "О проекте" },
+  { href: "/#features", label: "Преимущества" },
+  { href: "/#pricing", label: "Тарифы и цены" },
+  { href: "/#faq", label: "Часто задаваемые вопросы" },
   { href: "/legal#agreement", label: "Пользовательское соглашение" },
-  { href: "/legal/oferta", label: "Публичная оферта" },
+  { href: "/legal#offer", label: "Публичная оферта" },
 ];
 
 const navigationLinks = [
@@ -63,9 +63,8 @@ export default function Footer() {
             </div>
             <p className="theme-muted text-sm leading-5 md:text-base">
               Проект реализован при поддержке Фонда содействия инновациям в рамках
-              программы «Студенческий стартап» мероприятия «Платформа
-              университетского технологического предпринимательства» федерального
-              проекта «Технологии».
+              программы «Студенческий стартап» федерального проекта
+              «Платформа университетского технологического предпринимательства».
             </p>
           </div>
         </div>
