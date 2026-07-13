@@ -1,15 +1,15 @@
 "use client";
 
 import {
-	Dialog,
-	DialogBackdrop,
-	DialogPanel,
-	Disclosure,
-	DisclosureButton,
-	DisclosurePanel,
-	Popover,
-	PopoverButton,
-	PopoverPanel,
+  Dialog,
+  DialogBackdrop,
+  DialogPanel,
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+  Popover,
+  PopoverButton,
+  PopoverPanel,
 } from "@headlessui/react";
 import Link from "next/link";
 import { useState } from "react";
@@ -24,19 +24,29 @@ type NavItem = {
 };
 
 const primaryItemsBeforeResources: NavItem[] = [
-  { href: "/", label: "О ПРОЕКТЕ" },
-  { href: "#", label: "ПЕРЕВОДЧИК", beta: true },
+  { href: "#hero", label: "О ПРОЕКТЕ" },
+  {
+    href: "https://app.recode-group.ru/translator",
+    label: "ПЕРЕВОДЧИК",
+    beta: true,
+  },
 ];
 
 const resourceItems: NavItem[] = [
-  { href: "#", label: "Документация" },
-  { href: "#", label: "Конструктор макросов" },
-  { href: "#", label: "Юридические документы" },
+  {
+    href: "https://app.recode-group.ru/documentation",
+    label: "Документация",
+  },
+  {
+    href: "https://app.recode-group.ru/constructor",
+    label: "Конструктор макросов",
+  },
+  { href: "/legal", label: "Юридические документы" },
 ];
 
 const primaryItemsAfterResources: NavItem[] = [
-  { href: "#", label: "БЛОГ" },
-  { href: "#", label: "ТЕХПОДДЕРЖКА" },
+  { href: "/blog", label: "БЛОГ" },
+  { href: "/contacts#support", label: "ТЕХПОДДЕРЖКА" },
 ];
 
 function NavItemLabel({ beta, label }: Pick<NavItem, "beta" | "label">) {
@@ -45,7 +55,7 @@ function NavItemLabel({ beta, label }: Pick<NavItem, "beta" | "label">) {
       <span>{label}</span>
       {beta ? (
         <span className="header-beta text-[8px] font-bold uppercase leading-none">
-          Beta
+          Бета
         </span>
       ) : null}
     </span>
@@ -128,7 +138,7 @@ export default function Header() {
 
           <div className="ml-auto hidden flex-1 items-center justify-end gap-3 lg:flex">
             <ThemeToggle />
-            <Link href="/signin" className="header-cta btn-sm">
+            <Link href="https://app.recode-group.ru" className="header-cta btn-sm">
               Личный кабинет
             </Link>
           </div>
@@ -249,7 +259,7 @@ export default function Header() {
             </div>
 
             <Link
-              href="/signin"
+              href="https://app.recode-group.ru"
               className="header-cta mt-6 inline-flex h-11 items-center justify-center rounded-full px-6 text-sm font-medium"
               onClick={() => setMobileOpen(false)}
             >

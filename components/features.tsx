@@ -63,7 +63,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="relative isolate">
+    <section id="features" className="relative isolate">
       <div
         className="pointer-events-none absolute left-1/2 top-0 -z-10 -mt-20 -translate-x-1/2"
         aria-hidden="true"

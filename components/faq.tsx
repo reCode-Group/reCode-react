@@ -37,7 +37,7 @@ const faqRows = [
 
 export default function Faq() {
   return (
-    <section className="relative isolate">
+    <section id="faq" className="relative isolate">
       <div className="section-shell mx-auto max-w-6xl px-4 sm:px-6">
         <div className="section-divider py-12 md:py-20">
           <div className="mx-auto max-w-3xl pb-10 text-center md:pb-14">

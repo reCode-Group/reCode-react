@@ -51,7 +51,7 @@ export default function ThemeToggle() {
       onClick={toggleTheme}
       className={`relative inline-flex h-11 w-7 items-center justify-center rounded-full border p-1 transition-colors ${
         isLight
-          ? "border-sky-200 bg-white/95 text-slate-700 shadow-[0_10px_24px_rgba(15,23,42,0.08)]"
+          ? "border-sky-200 bg-white/95 text-slate-700"
           : "border-gray-700/80 bg-gray-900/90 text-gray-200"
       }`}
       aria-label={isLight ? "Switch to dark theme" : "Switch to light theme"}

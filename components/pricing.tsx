@@ -1,10 +1,12 @@
+
 const pricingCards = [
   {
     id: 1,
     title: "Базовый",
     price: "1 000",
     postfix: "₽ / мес.",
-    items: ["3 000 токенов", "Базовая поддержка", "Базовый"],
+    items: ["3 000 токенов", "Без ограничений переводов", "Переводчик макросов", "Базовая поддержка"],
+    description: "",
   },
   {
     id: 2,
@@ -13,24 +15,26 @@ const pricingCards = [
     postfix: "₽ / мес.",
     items: [
       "10 000 токенов",
+      "Без ограничений переводов",
+      "Конструктор макросов",
       "Базовая поддержка",
-      "Базовый",
-      "Базовый",
     ],
     highlight: true,
+    description: "Включая возможности тарифа «Базовый»",
   },
   {
     id: 3,
-    title: "Премиум",
-    price: "25 000",
+    title: "Расширенный",
+    price: "5 000",
     postfix: "₽ / мес.",
-    items: ["25 000 токенов", "Базовая поддержка", "Расширенная поддержка"],
+    items: ["50 000 токенов", "Без ограничений переводов", "Конструктор макросов", "Расширенная поддержка"],
+    description: "Включая возможности тарифа «Стандартный»",
   },
 ];
 
 export default function Pricing() {
   return (
-    <section className="relative isolate">
+    <section id="pricing" className="relative isolate">
       <div className="section-shell mx-auto max-w-6xl px-4 sm:px-6">
         <div className="section-divider py-12 md:py-20">
           <div className="mx-auto max-w-3xl pb-10 text-center md:pb-14">
@@ -53,8 +57,8 @@ export default function Pricing() {
                 }`}
               >
                 <div
-                  className={`rounded-3xl p-5 ${
-                    card.highlight ? "bg-white/5" : "bg-white dark:bg-slate-950/60"
+                  className={`rounded-3xl p-5 border border-slate-950/10 ${
+                    card.highlight ? "bg-white/5" : "bg-white/5 dark:bg-slate-950/60"
                   }`}
                 >
                   <div
@@ -72,16 +76,16 @@ export default function Pricing() {
                       <span className="text-lg text-slate-400">{card.postfix}</span>
                     </p>
                   </div>
-                  <button
-                    type="button"
+                  <a
                     className={`mt-4 inline-flex h-10 items-center justify-center rounded-xl px-5 text-xs font-bold uppercase tracking-[0.06em] ${
                       card.highlight
                         ? "bg-white text-slate-900"
                         : "btn btn-primary"
                     }`}
+                    href="https://app.recode-group.ru/lk/billing"
                   >
                     Выбрать
-                  </button>
+                  </a>
                 </div>
 
                 <ul
@@ -100,7 +104,7 @@ export default function Pricing() {
                 </ul>
 
                 <p className="theme-muted mt-6 text-[11px] leading-[1.4]">
-                  * Пояснения о тарифе в две строки небольшие, чтобы внести ясность
+                  {card.description}
                 </p>
               </article>
             ))}

@@ -17,7 +17,7 @@ const supportedPackages = [
 
 export default function HeroHome() {
   return (
-    <section>
+    <section id="hero">
       <div className="section-shell mx-auto max-w-6xl px-4 sm:px-6">
         {/* Hero content */}
         <div className="py-12 md:py-20">
@@ -48,7 +48,7 @@ export default function HeroHome() {
                 <div data-aos="fade-up" data-aos-delay={400}>
                   <a
                     className="btn btn-primary group mb-4 w-full sm:mb-0 sm:w-auto"
-                    href="#0"
+                    href="https://app.recode-group.ru"
                   >
                     <span className="relative inline-flex items-center">
                       НАЧАТЬ РАБОТУ
@@ -59,7 +59,7 @@ export default function HeroHome() {
                   </a>
                 </div>
                 <div data-aos="fade-up" data-aos-delay={600}>
-                  <a className="btn btn-secondary w-full sm:ml-4 sm:w-auto" href="#0">
+                  <a className="btn btn-secondary w-full sm:ml-4 sm:w-auto" href="#features">
                     СМОТРЕТЬ ВОЗМОЖНОСТИ
                   </a>
                 </div>

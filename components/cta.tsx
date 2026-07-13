@@ -29,7 +29,7 @@ export default function Cta() {
               <div data-aos="fade-up" data-aos-delay={400}>
                 <a
                   className="btn btn-primary group mb-4 w-full sm:mb-0 sm:w-auto"
-                  href="#0"
+                  href="https://app.recode-group.ru"
                 >
                   <span className="relative inline-flex items-center">
                     НАЧАТЬ РАБОТУ
@@ -42,7 +42,7 @@ export default function Cta() {
               <div data-aos="fade-up" data-aos-delay={600}>
                 <a
                   className="cta-secondary btn theme-muted hover:bg-[length:100%_150%] w-full sm:ml-4 sm:w-auto"
-                  href="#0"
+                  href="#features"
                 >
                   СМОТРЕТЬ ВОЗМОЖНОСТИ
                 </a>

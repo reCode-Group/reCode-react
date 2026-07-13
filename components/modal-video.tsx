@@ -89,7 +89,7 @@ export default function ModalVideo({
         aria-hidden="true"
       >
         <Image
-          className="md:max-w-none"
+          className="opacity-50 dark:opacity-100 md:max-w-none md:opacity-100"
           src={SecondaryIllustration}
           width={1165}
           height={1012}

@@ -2,8 +2,35 @@ import BottomFond from "@/public/images/bottom-fond.png";
 import BottomFond2 from "@/public/images/bottom-fond2.png";
 import FooterIllustration from "@/public/images/footer-illustration.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 import Logo from "./logo";
+
+const platformLinks = [
+  { href: "#hero", label: "О проекте" },
+  { href: "#features", label: "Преимущества" },
+  { href: "#pricing", label: "Тарифы и цены" },
+  { href: "#faq", label: "Часто задаваемые вопросы" },
+  { href: "/legal#agreement", label: "Пользовательское соглашение" },
+  { href: "/legal/oferta", label: "Публичная оферта" },
+];
+
+const navigationLinks = [
+  { href: "/", label: "Главная" },
+  { href: "https://app.recode-group.ru", label: "Личный кабинет" },
+  { href: "/contacts#support", label: "Техподдержка" },
+  { href: "/blog", label: "Блог" },
+  { href: "/contacts", label: "Контакты" },
+];
+
+const resourceLinks = [
+  { href: "https://app.recode-group.ru/documentation", label: "Документация" },
+  {
+    href: "https://app.recode-group.ru/constructor",
+    label: "Конструктор макросов",
+  },
+  { href: "/legal", label: "Юридические документы" },
+];
 
 export default function Footer() {
   return (
@@ -26,11 +53,7 @@ export default function Footer() {
           <div className="flex flex-col gap-4 md:flex-row md:items-center">
             <div className="flex shrink-0">
               <div className="flex items-center gap-4 rounded-xl bg-white px-4 py-3">
-                <Image
-                  src={BottomFond}
-                  alt="Фонд"
-                  className="h-[34px] w-auto md:h-[40px]"
-                />
+                <Image src={BottomFond} alt="Фонд" className="h-[34px] w-auto md:h-[40px]" />
                 <Image
                   src={BottomFond2}
                   alt="Студенческий стартап"
@@ -39,10 +62,10 @@ export default function Footer() {
               </div>
             </div>
             <p className="theme-muted text-sm leading-5 md:text-base">
-              Проект реализован при поддержке Фонда содействия инновациям в
-              рамках программы «Студенческий стартап» мероприятия «Платформа
-              университетского технологического предпринимательства»
-              федерального проекта «Технологии».
+              Проект реализован при поддержке Фонда содействия инновациям в рамках
+              программы «Студенческий стартап» мероприятия «Платформа
+              университетского технологического предпринимательства» федерального
+              проекта «Технологии».
             </p>
           </div>
         </div>
@@ -51,18 +74,11 @@ export default function Footer() {
           <div className="space-y-2">
             <h3 className="theme-heading text-sm font-medium">Платформа</h3>
             <ul className="space-y-2 text-sm">
-              {[
-                "О проекте",
-                "Преимущества",
-                "Тарифы и цены",
-                "Часто задаваемые вопросы",
-                "Пользовательское соглашение",
-                "Публичная оферта",
-              ].map((item) => (
-                <li key={item}>
-                  <a className="theme-link accent-hover transition" href="#0">
-                    {item}
-                  </a>
+              {platformLinks.map((item) => (
+                <li key={item.label}>
+                  <Link className="theme-link accent-hover transition" href={item.href}>
+                    {item.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -71,30 +87,24 @@ export default function Footer() {
           <div className="space-y-2">
             <h3 className="theme-heading text-sm font-medium">Навигация</h3>
             <ul className="space-y-2 text-sm">
-              {["Главная", "Личный кабинет", "Блог", "Контакты"].map(
-                (item) => (
-                  <li key={item}>
-                    <a className="theme-link accent-hover transition" href="#0">
-                      {item}
-                    </a>
-                  </li>
-                ),
-              )}
+              {navigationLinks.map((item) => (
+                <li key={item.label}>
+                  <Link className="theme-link accent-hover transition" href={item.href}>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div className="space-y-2">
             <h3 className="theme-heading text-sm font-medium">Ресурсы</h3>
             <ul className="space-y-2 text-sm">
-              {[
-                "Документация",
-                "Конструктор макросов",
-                "Юридические документы",
-              ].map((item) => (
-                <li key={item}>
-                  <a className="theme-link accent-hover transition" href="#0">
-                    {item}
-                  </a>
+              {resourceLinks.map((item) => (
+                <li key={item.label}>
+                  <Link className="theme-link accent-hover transition" href={item.href}>
+                    {item.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -108,7 +118,7 @@ export default function Footer() {
               <p className="theme-link mb-3">
                 © ООО «Рекод»
                 <span className="theme-separator"> · </span>
-                <a className="theme-link accent-hover transition" href="#0">
+                <a className="theme-link accent-hover transition" href="/contacts">
                   О компании
                 </a>
               </p>
@@ -117,7 +127,7 @@ export default function Footer() {
                 <li>
                   <a
                     className="accent-icon flex items-center justify-center transition hover:opacity-70"
-                    href="https://vk.com"
+                    href="https://vk.com/recode_official"
                     target="_blank"
                     rel="noreferrer"
                     aria-label="VK"
@@ -130,7 +140,7 @@ export default function Footer() {
                       aria-hidden="true"
                     >
                       <path
-                        d="M9.27426 10.6429C3.45683 10.6429 0.138358 6.64758 0 0H2.91404C3.00982 4.87979 5.15864 6.94665 6.86044 7.37237V0H9.60419V4.20822C11.2858 4.02729 13.0504 2.10943 13.6464 0H16.3901C15.9325 2.59901 14.0189 4.51687 12.6577 5.30551C14.0189 5.94408 16.1996 7.61716 17.0287 10.6429H14.0082C13.359 8.61866 11.7424 7.05308 9.60419 6.83916V10.6429H9.27426Z"
+                        d="M9.27426 10.6429C3.45683 10.6429 0.1383586 6.64758 0 0H2.91404C3.00982 4.87979 5.15864 6.94665 6.86044 7.37237V0H9.60419V4.20822C11.2858 4.02729 13.0504 2.10943 13.6464 0H16.3901C15.9325 2.59901 14.0189 4.51687 12.6577 5.30551C14.0189 5.94408 16.1996 7.61716 17.0287 10.6429H14.0082C13.359 8.61866 11.7424 7.05308 9.60419 6.83916V10.6429H9.27426Z"
                         fill="#005de0"
                       />
                     </svg>
@@ -139,7 +149,7 @@ export default function Footer() {
                 <li>
                   <a
                     className="accent-icon flex items-center justify-center transition hover:opacity-70"
-                    href="https://max.ru"
+                    href="https://max.ru/+79871470944"
                     target="_blank"
                     rel="noreferrer"
                     aria-label="MAX"
@@ -161,7 +171,7 @@ export default function Footer() {
                 <li>
                   <a
                     className="accent-icon flex items-center justify-center transition hover:opacity-70"
-                    href="https://habr.com"
+                    href="https://habr.com/ru/users/recode-team/"
                     target="_blank"
                     rel="noreferrer"
                     aria-label="Habr"
