@@ -7,7 +7,7 @@ export default function SupportBanner() {
     <div className="w-full">
       <div className="flex flex-col gap-4 md:flex-row md:items-center">
         <div className="flex shrink-0 justify-center md:justify-start">
-          <div className="flex items-center justify-center gap-4 rounded-xl bg-white px-4 py-3">
+          <div className="support-logos flex items-center justify-center gap-4 rounded-xl px-4 py-3">
             <Image
               src={BottomFond}
               alt="Фонд"
