@@ -99,6 +99,10 @@ input[type='search']::-webkit-search-results-decoration {
     --site-accent-border: linear-gradient(to right, rgb(0 93 224 / 0.14), rgb(77 163 255 / 0.45), rgb(0 93 224 / 0.14));
 }
 
+.support-logos {
+    background-color: #fff;
+}
+
 html[data-theme="light"] {
     --site-accent: #005de0;
     --site-accent-strong: #0047ab;
@@ -141,6 +145,10 @@ html[data-theme="light"] {
     --site-separator: #94a3b8;
     --site-workflow-border: linear-gradient(to bottom right, rgb(0 93 224 / 0.2), rgb(147 197 253 / 0.8), rgb(191 219 254 / 0.95));
     --site-workflow-pill-text: #005de0;
+}
+
+html[data-theme="light"] .support-logos {
+    background-color: transparent;
 }
 
 .site-shell {

@@ -52,7 +52,7 @@ export default function Footer() {
         <div className="footer-top-bar testimonial-card mt-6 rounded-2xl px-4 py-4 md:mt-10 md:px-6">
           <div className="flex flex-col gap-4 md:flex-row md:items-center">
             <div className="flex shrink-0">
-              <div className="flex items-center gap-4 rounded-xl bg-white px-4 py-3">
+              <div className="support-logos flex items-center gap-4 rounded-xl px-4 py-3">
                 <Image src={BottomFond} alt="Фонд" className="h-[34px] w-auto md:h-[40px]" />
                 <Image
                   src={BottomFond2}
