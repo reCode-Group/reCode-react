@@ -17,6 +17,7 @@ type ThemeContextValue = {
 };
 
 const STORAGE_KEY = "chakra-ui-color-mode";
+const COOKIE_KEY = "recode-color-mode";
 const DEFAULT_THEME: Theme = "light";
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
@@ -26,16 +27,68 @@ function applyTheme(theme: Theme) {
   document.documentElement.style.colorScheme = theme;
 }
 
-function normalizeTheme(value: string | null): Theme {
-  return value === "dark" ? "dark" : "light";
+function parseTheme(value: string | null | undefined): Theme | null {
+  return value === "dark" || value === "light" ? value : null;
+}
+
+function readThemeCookie(): Theme | null {
+  const cookie = document.cookie
+    .split("; ")
+    .find((item) => item.startsWith(`${COOKIE_KEY}=`));
+
+  return parseTheme(cookie?.slice(COOKIE_KEY.length + 1));
+}
+
+function readLocalTheme(): Theme | null {
+  try {
+    return parseTheme(window.localStorage.getItem(STORAGE_KEY));
+  } catch {
+    return null;
+  }
+}
+
+function writeLocalTheme(theme: Theme) {
+  try {
+    window.localStorage.setItem(STORAGE_KEY, theme);
+  } catch {
+    // The shared cookie remains the source of truth when localStorage is unavailable.
+  }
+}
+
+function writeThemeCookie(theme: Theme) {
+  const hostname = window.location.hostname;
+  const isSharedDomain =
+    hostname === "recode-group.ru" || hostname.endsWith(".recode-group.ru");
+  const attributes = [
+    `${COOKIE_KEY}=${theme}`,
+    "Path=/",
+    "Max-Age=31536000",
+    "SameSite=Lax",
+  ];
+
+  if (isSharedDomain) {
+    attributes.push("Domain=recode-group.ru");
+  }
+
+  if (window.location.protocol === "https:") {
+    attributes.push("Secure");
+  }
+
+  document.cookie = attributes.join("; ");
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setThemeState] = useState<Theme>(DEFAULT_THEME);
 
   useEffect(() => {
-    const savedTheme = window.localStorage.getItem(STORAGE_KEY);
-    const nextTheme = normalizeTheme(savedTheme);
+    const cookieTheme = readThemeCookie();
+    const localTheme = readLocalTheme();
+    const nextTheme = cookieTheme ?? localTheme ?? DEFAULT_THEME;
+
+    if (cookieTheme) {
+      writeLocalTheme(cookieTheme);
+    }
+
     setThemeState(nextTheme);
     applyTheme(nextTheme);
   }, []);
@@ -43,7 +96,8 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const setTheme = (nextTheme: Theme) => {
     setThemeState(nextTheme);
     applyTheme(nextTheme);
-    window.localStorage.setItem(STORAGE_KEY, nextTheme);
+    writeThemeCookie(nextTheme);
+    writeLocalTheme(nextTheme);
   };
 
   const value = {
@@ -67,4 +121,4 @@ export function useTheme() {
   return context;
 }
 
-export { DEFAULT_THEME, STORAGE_KEY, type Theme };
+export { COOKIE_KEY, DEFAULT_THEME, STORAGE_KEY, type Theme };

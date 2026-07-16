@@ -4,6 +4,7 @@ import { Roboto } from "next/font/google";
 
 import Header from "@/components/ui/header";
 import {
+  COOKIE_KEY,
   DEFAULT_THEME,
   ThemeProvider,
   STORAGE_KEY,
@@ -34,7 +35,7 @@ export default function RootLayout({
       >
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var raw=localStorage.getItem('${STORAGE_KEY}');var theme=raw==='dark'?'dark':'light';document.documentElement.dataset.theme=theme;document.documentElement.style.colorScheme=theme;}catch(e){document.documentElement.dataset.theme='${DEFAULT_THEME}';document.documentElement.style.colorScheme='${DEFAULT_THEME}';}})();`,
+            __html: `(function(){var theme='${DEFAULT_THEME}';try{var match=document.cookie.match(/(?:^|;\\s*)${COOKIE_KEY}=(light|dark)(?:;|$)/);if(match){theme=match[1];}else{var local=localStorage.getItem('${STORAGE_KEY}');if(local==='light'||local==='dark'){theme=local;}}}catch(e){}document.documentElement.dataset.theme=theme;document.documentElement.style.colorScheme=theme;})();`,
           }}
         />
         <ThemeProvider>
