@@ -57,8 +57,8 @@ export default function Pricing() {
                 }`}
               >
                 <div
-                  className={`rounded-3xl p-5 border border-slate-950/10 ${
-                    card.highlight ? "bg-white/5" : "bg-white/5 dark:bg-slate-950/60"
+                  className={`pricing-card-panel rounded-3xl border p-5 ${
+                    card.highlight ? "" : "pricing-card-panel-standard"
                   }`}
                 >
                   <div

@@ -29,7 +29,7 @@ export default function Workflows() {
             {/* Card 1 */}
             <a
               className="workflow-card group/card relative h-full overflow-hidden rounded-2xl p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 hover:after:opacity-20 group-hover:before:opacity-100"
-              href="#0"
+              href="https://app.recode-group.ru"
             >
               <div className="workflow-card-inner relative z-20 h-full overflow-hidden rounded-[inherit]">
                 {/* Arrow */}
@@ -76,7 +76,7 @@ export default function Workflows() {
             {/* Card 2 */}
             <a
               className="workflow-card group/card relative h-full overflow-hidden rounded-2xl p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 hover:after:opacity-20 group-hover:before:opacity-100"
-              href="#0"
+              href="https://app.recode-group.ru"
             >
               <div className="workflow-card-inner relative z-20 h-full overflow-hidden rounded-[inherit]">
                 {/* Arrow */}
@@ -123,7 +123,7 @@ export default function Workflows() {
             {/* Card 3 */}
             <a
               className="workflow-card group/card relative h-full overflow-hidden rounded-2xl p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 hover:after:opacity-20 group-hover:before:opacity-100"
-              href="#0"
+              href="https://app.recode-group.ru"
             >
               <div className="workflow-card-inner relative z-20 h-full overflow-hidden rounded-[inherit]">
                 {/* Arrow */}

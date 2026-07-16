@@ -82,7 +82,7 @@ export default function HeroHome() {
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
                 >
-                  <div className="mx-auto flex h-[96px] w-[96px] items-center justify-center rounded-[24px] border-2 border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900/70 md:h-[112px] md:w-[112px]">
+                  <div className="supported-package-icon mx-auto flex h-[96px] w-[96px] items-center justify-center rounded-[24px] border-2 p-3 md:h-[112px] md:w-[112px]">
                     <img
                       src={item.image.src}
                       alt={item.title}

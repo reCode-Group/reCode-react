@@ -103,6 +103,25 @@ input[type='search']::-webkit-search-results-decoration {
     background-color: #fff;
 }
 
+.supported-package-icon {
+    border-color: #1e293b;
+    background-color: rgb(15 23 42 / 0.7);
+}
+
+.audience-card-icon {
+    border-color: #1e293b;
+    background-color: rgb(15 23 42 / 0.8);
+}
+
+.pricing-card-panel {
+    border-color: rgb(2 6 23 / 0.1);
+    background-color: rgb(255 255 255 / 0.05);
+}
+
+.pricing-card-panel-standard {
+    background-color: rgb(2 6 23 / 0.6);
+}
+
 html[data-theme="light"] {
     --site-accent: #005de0;
     --site-accent-strong: #0047ab;
@@ -149,6 +168,20 @@ html[data-theme="light"] {
 
 html[data-theme="light"] .support-logos {
     background-color: transparent;
+}
+
+html[data-theme="light"] .supported-package-icon {
+    border-color: #e2e8f0;
+    background-color: #fff;
+}
+
+html[data-theme="light"] .audience-card-icon {
+    border-color: #e2e8f0;
+    background-color: #fff;
+}
+
+html[data-theme="light"] .pricing-card-panel-standard {
+    background-color: rgb(255 255 255 / 0.05);
 }
 
 .site-shell {

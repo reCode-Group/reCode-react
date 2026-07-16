@@ -41,7 +41,7 @@ export default function Testimonials() {
               key={card.title}
               className="testimonial-card rounded-3xl p-8 md:min-h-[280px]"
             >
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900/80">
+              <div className="audience-card-icon flex h-14 w-14 items-center justify-center rounded-2xl border">
                 <Image
                   src={card.icon}
                   alt={card.iconAlt}
