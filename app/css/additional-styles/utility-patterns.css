@@ -189,6 +189,13 @@ html[data-theme="light"] .pricing-card-panel-standard {
     color: var(--site-text);
 }
 
+.cookie-banner {
+    border: 1px solid transparent;
+    background:
+        linear-gradient(var(--site-panel), var(--site-panel)) padding-box,
+        var(--site-panel-border) border-box;
+}
+
 .header-shell {
     background: var(--site-panel);
 }

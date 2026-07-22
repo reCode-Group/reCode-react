@@ -3,6 +3,7 @@ import "./css/style.css";
 import { Roboto } from "next/font/google";
 
 import Header from "@/components/ui/header";
+import CookieBanner from "@/components/ui/cookie-banner";
 import {
   COOKIE_KEY,
   DEFAULT_THEME,
@@ -43,6 +44,7 @@ export default function RootLayout({
             <Header />
             {children}
           </div>
+          <CookieBanner />
         </ThemeProvider>
       </body>
     </html>
