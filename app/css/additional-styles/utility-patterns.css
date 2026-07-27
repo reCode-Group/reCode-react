@@ -241,6 +241,7 @@ html[data-theme="light"] .pricing-card-panel-standard {
     color: var(--site-heading);
     font-size: 14px;
     font-weight: 500;
+    white-space: nowrap;
     transition: opacity 0.2s ease, color 0.2s ease;
 }
 
@@ -274,6 +275,7 @@ html[data-theme="light"] .pricing-card-panel-standard {
     color: var(--site-heading);
     font-size: 0.875rem;
     font-weight: 500;
+    white-space: nowrap;
     transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
 }
 
