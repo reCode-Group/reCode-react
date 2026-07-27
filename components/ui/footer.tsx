@@ -9,7 +9,7 @@ import Logo from "./logo";
 const platformLinks = [
   { href: "/#hero", label: "О проекте" },
   { href: "/#features", label: "Преимущества" },
-  { href: "/#pricing", label: "Тарифы и цены" },
+  { href: "/#pricing", label: "Пакеты и цены" },
   { href: "/#faq", label: "Часто задаваемые вопросы" },
   { href: "/legal#agreement", label: "Пользовательское соглашение" },
   { href: "/legal#offer", label: "Публичная оферта" },

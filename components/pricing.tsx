@@ -4,7 +4,7 @@ const pricingCards = [
     id: 1,
     title: "Базовый",
     price: "1 000",
-    postfix: "₽ / мес.",
+    postfix: "₽",
     items: ["3 000 токенов", "Без ограничений переводов", "Переводчик макросов", "Базовая поддержка"],
     description: "",
   },
@@ -12,7 +12,7 @@ const pricingCards = [
     id: 2,
     title: "Стандартный",
     price: "3 000",
-    postfix: "₽ / мес.",
+    postfix: "₽",
     items: [
       "10 000 токенов",
       "Без ограничений переводов",
@@ -20,15 +20,15 @@ const pricingCards = [
       "Базовая поддержка",
     ],
     highlight: true,
-    description: "Включая возможности тарифа «Базовый»",
+    description: "Включая возможности пакета «Базовый»",
   },
   {
     id: 3,
     title: "Расширенный",
     price: "5 000",
-    postfix: "₽ / мес.",
+    postfix: "₽",
     items: ["50 000 токенов", "Без ограничений переводов", "Конструктор макросов", "Расширенная поддержка"],
-    description: "Включая возможности тарифа «Стандартный»",
+    description: "Включая возможности пакета «Стандартный»",
   },
 ];
 
@@ -42,7 +42,7 @@ export default function Pricing() {
               <span className="theme-eyebrow inline-flex">Доступные пакеты</span>
             </div>
             <h2 className="theme-display-title animate-[gradient_6s_linear_infinite] pb-4 font-nacelle text-3xl font-semibold md:text-4xl">
-              Тарифы
+              Пакеты токенов
             </h2>
           </div>
 
@@ -103,7 +103,11 @@ export default function Pricing() {
                   ))}
                 </ul>
 
-                <p className="theme-muted mt-6 text-[11px] leading-[1.4]">
+                <p
+                  className={`mt-6 text-[11px] leading-[1.4] ${
+                    card.highlight ? "text-white/75" : "theme-muted"
+                  }`}
+                >
                   {card.description}
                 </p>
               </article>

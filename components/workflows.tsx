@@ -20,7 +20,7 @@ export default function Workflows() {
               Как всё устроено?
             </h2>
             <p className="theme-muted text-lg">
-              Три ключевых этапа работы с переводом макросов: от управления доступом и тарифом до
+              Три ключевых этапа работы с переводом макросов: от управления доступом и пакетом до
   перевода, редактирования и контроля ресурсов.
             </p>
           </div>
@@ -67,7 +67,7 @@ export default function Workflows() {
                     </span>
                   </div>
                   <p className="theme-muted">
-                    В личном кабинете вы управляете аккаунтом, приобретаете тариф и контролируете доступный
+                    В личном кабинете вы управляете аккаунтом, приобретаете пакет и контролируете доступный
      функционал.
                   </p>
                 </div>
@@ -156,12 +156,12 @@ export default function Workflows() {
                   <div className="mb-3">
                     <span className="workflow-pill btn-sm relative rounded-full px-4 py-1.5 text-base font-medium">
                       <span className="workflow-pill-label">
-                        Тарифы и токены 
+                        Пакеты токенов 
                       </span>
                     </span>
                   </div>
                   <p className="theme-muted">
-                    Выбирайте подходящий тариф под необходимый функционал, задачи команды и объем перевода.
+                    Выбирайте подходящий пакет под необходимый функционал, задачи команды и объем перевода.
                   </p>
                 </div>
               </div>
