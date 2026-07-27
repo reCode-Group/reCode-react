@@ -115,11 +115,7 @@ export default function Footer() {
             </div>
             <div className="text-sm">
               <p className="theme-link mb-3">
-                © ООО «Рекод»
-                <span className="theme-separator"> · </span>
-                <a className="theme-link accent-hover transition" href="/contacts">
-                  О компании
-                </a>
+                © ООО «Рекод Решения», 2026
               </p>
 
               <ul className="inline-flex items-center gap-3">
