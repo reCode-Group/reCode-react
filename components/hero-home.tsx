@@ -1,6 +1,6 @@
 import ModalVideo from "@/components/modal-video";
 import SupportBanner from "@/components/ui/support-banner";
-import VideoThumb from "@/public/images/hero-image-03.png";
+import VideoThumb from "@/public/images/hero-image-02.png";
 import HeroMyOffice from "@/public/images/hero-myoffice.png";
 import HeroOffice2010 from "@/public/images/hero-office2010.png";
 import HeroOffice2016 from "@/public/images/hero-office2016.png";
@@ -99,12 +99,12 @@ export default function HeroHome() {
 
           <ModalVideo
             thumb={VideoThumb}
-            thumbWidth={1104}
-            thumbHeight={576}
+            thumbWidth={1920}
+            thumbHeight={1080}
             thumbAlt="Modal video thumbnail"
-            video="videos//video.mp4"
-            videoWidth={1920}
-            videoHeight={1080}
+            video="videos//11.webm"
+            videoWidth={3400}
+            videoHeight={1982}
           />
         </div>
       </div>

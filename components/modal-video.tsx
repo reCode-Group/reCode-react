@@ -108,11 +108,11 @@ export default function ModalVideo({
         data-aos-delay={200}
       >
         <figure
-          className="video-frame video-frame-animated relative overflow-hidden rounded-2xl"
+          className="video-frame video-frame-animated relative overflow-hidden rounded-2xl border border-slate-200/80 shadow-2xl shadow-slate-950/10 dark:border-white/10 dark:shadow-black/35"
           style={{ transform: `scale(${scale})` }}
         >
           <Image
-            className="opacity-50 grayscale"
+            className="opacity-100 "
             src={thumb}
             width={thumbWidth}
             height={thumbHeight}
@@ -121,38 +121,25 @@ export default function ModalVideo({
           />
         </figure>
         {/* Play icon */}
-        <span className="video-play pointer-events-none absolute p-2.5 before:absolute before:inset-0 before:rounded-full before:duration-300 group-hover:before:scale-110">
+        <span className="video-play pointer-events-none absolute p-2.5 before:absolute before:inset-0 before:rounded-full before:shadow-lg before:shadow-blue-950/25 before:duration-300 group-hover:before:scale-110">
           <span className="relative flex items-center gap-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={20}
               height={20}
-              fill="none"
+              viewBox="0 0 20 20"
+              className="text-white"
+              fill="currentColor"
+              aria-hidden="true"
             >
               <path
-                fill="url(#pla)"
-                fillRule="evenodd"
-                d="M10 20c5.523 0 10-4.477 10-10S15.523 0 10 0 0 4.477 0 10s4.477 10 10 10Zm3.5-10-5-3.5v7l5-3.5Z"
-                clipRule="evenodd"
+                d="M7.25 4.75v10.5L15.25 10l-8-5.25Z"
               />
-              <defs>
-                <linearGradient
-                  id="pla"
-                  x1={10}
-                  x2={10}
-                  y1={0}
-                  y2={20}
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stopColor="#005de0" />
-                  <stop offset={1} stopColor="#005de0" stopOpacity=".72" />
-                </linearGradient>
-              </defs>
             </svg>
-            <span className="text-sm font-medium leading-tight theme-muted">
+            <span className="text-sm font-medium leading-tight text-white/80">
               Смотреть видео
-              <span className="theme-separator"> - </span>
-              1:27
+              <span className="text-white/45"> - </span>
+              0:36
             </span>
           </span>
         </span>
@@ -180,6 +167,7 @@ export default function ModalVideo({
                 height={videoHeight}
                 loop
                 controls
+								autoPlay
               >
                 <source src={video} type="video/mp4" />
                 Your browser does not support the video tag.

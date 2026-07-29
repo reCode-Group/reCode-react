@@ -86,7 +86,7 @@ input[type='search']::-webkit-search-results-decoration {
     --site-divider: linear-gradient(to right, transparent, rgb(148 163 184 / 0.25), transparent);
     --site-band: linear-gradient(to right, transparent, rgb(31 41 55 / 0.5));
     --site-filter-bg: rgb(31 41 55 / 0.4);
-    --site-play-bg: #030712;
+    --site-play-bg: #005de0;
     --site-video-frame: linear-gradient(to bottom right, rgb(17 24 39), rgb(0 93 224 / 0.22), rgb(17 24 39));
     --site-separator: #374151;
     --site-accent: var(--accent);
@@ -159,7 +159,7 @@ html[data-theme="light"] {
     --site-filter-text: #5b6b84;
     --site-filter-text-active: #0f172a;
     --site-filter-hover: #334155;
-    --site-play-bg: #ffffff;
+    --site-play-bg: #005de0;
     --site-video-frame: linear-gradient(to bottom right, rgb(255 255 255), rgb(219 234 254 / 0.85), rgb(239 246 255));
     --site-separator: #94a3b8;
     --site-workflow-border: linear-gradient(to bottom right, rgb(0 93 224 / 0.2), rgb(147 197 253 / 0.8), rgb(191 219 254 / 0.95));
