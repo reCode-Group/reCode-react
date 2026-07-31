@@ -26,6 +26,9 @@ importers:
       next:
         specifier: 15.1.11
         version: 15.1.11(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      nodemailer:
+        specifier: ^9.0.3
+        version: 9.0.3
       react:
         specifier: 19.2.3
         version: 19.2.3
@@ -45,6 +48,9 @@ importers:
       '@types/aos':
         specifier: ^3.0.7
         version: 3.0.7
+      '@types/nodemailer':
+        specifier: ^8.0.1
+        version: 8.0.1
       postcss:
         specifier: ^8.5.1
         version: 8.5.1
@@ -381,6 +387,9 @@ packages:
   '@types/node@22.13.0':
     resolution: {integrity: sha512-ClIbNe36lawluuvq3+YYhnIN2CELi+6q8NpnM7PYp4hBn/TatfboPgVSm2rwKRfnV2M+Ty9GWDFI64KEe+kysA==}
 
+  '@types/nodemailer@8.0.1':
+    resolution: {integrity: sha512-PxpaInm8V1JQDd4j0ds5HfvWQk8JupS1C0Picb96QJsrrRDjBH+DlK7L4ZdNSqNULhiZRQHc40nLVShaGxXAMw==}
+
   '@types/react-dom@19.0.3':
     resolution: {integrity: sha512-0Knk+HJiMP/qOZgMyNFamlIjw9OFCsyC2ZbigmEEyXXixgre6IQpm/4V+r3qH4GC1JPvRJKInw+on2rV6YZLeA==}
     peerDependencies:
@@ -548,6 +557,10 @@ packages:
         optional: true
       sass:
         optional: true
+
+  nodemailer@9.0.3:
+    resolution: {integrity: sha512-n+YP+NKwR5zRWa60k3GiQ6Q3B4KXCoAw40dAKeCtYn020iNN74aWK2liXIC3ZEATeGql7we3tE3t8QwhY0eskw==}
+    engines: {node: '>=6.0.0'}
 
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
@@ -900,6 +913,10 @@ snapshots:
     dependencies:
       undici-types: 6.20.0
 
+  '@types/nodemailer@8.0.1':
+    dependencies:
+      '@types/node': 22.13.0
+
   '@types/react-dom@19.0.3(@types/react@19.0.8)':
     dependencies:
       '@types/react': 19.0.8
@@ -1042,6 +1059,8 @@ snapshots:
     transitivePeerDependencies:
       - '@babel/core'
       - babel-plugin-macros
+
+  nodemailer@9.0.3: {}
 
   picocolors@1.1.1: {}
 

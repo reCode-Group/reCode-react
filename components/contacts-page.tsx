@@ -8,6 +8,12 @@ type FormState = {
   email: string;
   phone: string;
   message: string;
+  website: string;
+};
+
+type SubmitState = {
+  status: "idle" | "loading" | "success" | "error";
+  message: string;
 };
 
 const COMPANY_CONTACTS = {
@@ -30,7 +36,41 @@ const INITIAL_FORM: FormState = {
   email: "",
   phone: "",
   message: "",
+  website: "",
 };
+
+const INITIAL_SUBMIT_STATE: SubmitState = {
+  status: "idle",
+  message: "",
+};
+
+function getSupportFormMessage(status: number, fallback?: string) {
+  if (status === 400) {
+    return fallback || "Проверьте обязательные поля и попробуйте отправить форму ещё раз.";
+  }
+
+  if (status === 429) {
+    return "Вы уже отправили несколько заявок. Новая отправка будет доступна примерно через 2 часа.";
+  }
+
+  if (status >= 500) {
+    return "Сейчас не получилось отправить заявку. Мы сохранили текст в форме, попробуйте ещё раз немного позже.";
+  }
+
+  return fallback || "Не получилось отправить заявку. Проверьте поля и попробуйте снова.";
+}
+
+function getFeedbackClass(status: SubmitState["status"]) {
+  if (status === "success") {
+    return "border-emerald-500/30 bg-emerald-500/10 text-emerald-200";
+  }
+
+  if (status === "error") {
+    return "border-red-500/30 bg-red-500/10 text-red-100";
+  }
+
+  return "border-blue-400/30 bg-blue-500/10 text-blue-100";
+}
 
 type ContactItemProps = {
   icon: ReactNode;
@@ -124,6 +164,7 @@ function ContactIconClock() {
 export default function ContactsPage() {
   const supportRef = useRef<HTMLElement | null>(null);
   const [formState, setFormState] = useState<FormState>(INITIAL_FORM);
+  const [submitState, setSubmitState] = useState<SubmitState>(INITIAL_SUBMIT_STATE);
 
   useEffect(() => {
     if (window.location.hash !== "#support") return;
@@ -136,14 +177,54 @@ export default function ContactsPage() {
   const handleFieldChange =
     (field: keyof FormState) =>
     (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      if (submitState.status !== "idle") {
+        setSubmitState(INITIAL_SUBMIT_STATE);
+      }
+
       setFormState((prev) => ({
         ...prev,
         [field]: event.target.value,
       }));
     };
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
+    setSubmitState({
+      status: "loading",
+      message: "Отправляем заявку...",
+    });
+
+    try {
+      const response = await fetch("/api/support", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formState),
+      });
+      const result = (await response.json()) as { ok?: boolean; message?: string };
+
+      if (!response.ok || !result.ok) {
+        setSubmitState({
+          status: "error",
+          message: getSupportFormMessage(response.status, result.message),
+        });
+        return;
+      }
+
+      setFormState(INITIAL_FORM);
+      setSubmitState({
+        status: "success",
+        message: result.message || "Заявка отправлена.",
+      });
+    } catch {
+      setSubmitState({
+        status: "error",
+        message:
+          "Похоже, соединение прервалось. Мы сохранили текст в форме, проверьте интернет и попробуйте снова.",
+      });
+    }
   };
 
   return (
@@ -225,10 +306,24 @@ export default function ContactsPage() {
                 Форма обратной связи
               </h2>
               <p className="theme-muted mt-3 text-sm leading-6">
-                Демонстрационный режим: форма пока без отправки на сервер.
+                Заполните форму, и обращение поступит в техническую поддержку.
               </p>
 
               <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
+                <label
+                  className="absolute left-[-10000px] top-auto h-px w-px overflow-hidden"
+                  aria-hidden="true"
+                >
+                  <span>Website</span>
+                  <input
+                    type="text"
+                    value={formState.website}
+                    onChange={handleFieldChange("website")}
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+                </label>
+
                 <label className="block">
                   <span className="theme-heading mb-2 block text-sm font-medium">Имя*</span>
                   <input
@@ -236,6 +331,7 @@ export default function ContactsPage() {
                     value={formState.name}
                     onChange={handleFieldChange("name")}
                     className="form-input w-full"
+                    required
                   />
                 </label>
 
@@ -256,6 +352,7 @@ export default function ContactsPage() {
                     value={formState.phone}
                     onChange={handleFieldChange("phone")}
                     className="form-input w-full"
+                    required
                   />
                 </label>
 
@@ -267,11 +364,35 @@ export default function ContactsPage() {
                     value={formState.message}
                     onChange={handleFieldChange("message")}
                     className="form-textarea min-h-36 w-full resize-y"
+                    required
                   />
                 </label>
 
-                <button type="submit" className="btn btn-primary w-full sm:w-auto">
-                  Отправить
+                {submitState.message ? (
+                  <div
+                    className={`rounded-lg border px-4 py-3 text-sm leading-6 ${getFeedbackClass(
+                      submitState.status,
+                    )}`}
+                    role={submitState.status === "error" ? "alert" : "status"}
+                    aria-live="polite"
+                  >
+                    <p className="font-medium">
+                      {submitState.status === "success"
+                        ? "Заявка отправлена"
+                        : submitState.status === "loading"
+                          ? "Отправляем заявку"
+                          : "Не удалось отправить"}
+                    </p>
+                    <p className="mt-1 opacity-90">{submitState.message}</p>
+                  </div>
+                ) : null}
+
+                <button
+                  type="submit"
+                  className="btn btn-primary w-full disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+                  disabled={submitState.status === "loading"}
+                >
+                  {submitState.status === "loading" ? "Отправка..." : "Отправить"}
                 </button>
               </form>
             </aside>
