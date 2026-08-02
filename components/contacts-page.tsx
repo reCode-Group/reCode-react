@@ -21,13 +21,13 @@ const COMPANY_CONTACTS = {
   phone: "+7 (987) 147-09-44",
   email: "info@recode-group.ru",
   address: "г. Уфа",
-  workHours: "Пн-Пт: 09:00 - 18:00 (МСК)",
+  workHours: "Пн-Пт: 08:00 - 17:00 (МСК)",
 };
 
 const SUPPORT_CONTACTS = {
   phone: "+7 (800) 777-10-10",
   email: "help@recode-group.ru",
-  workHours: "Ежедневно: 08:00 - 22:00 (МСК)",
+  workHours: "Ежедневно: 08:00 - 17:00 (МСК)",
   sla: "Среднее время ответа в рабочие часы - до 1 часа.",
 };
 
@@ -62,14 +62,14 @@ function getSupportFormMessage(status: number, fallback?: string) {
 
 function getFeedbackClass(status: SubmitState["status"]) {
   if (status === "success") {
-    return "border-emerald-500/30 bg-emerald-500/10 text-emerald-200";
+    return "support-feedback-success";
   }
 
   if (status === "error") {
-    return "border-red-500/30 bg-red-500/10 text-red-100";
+    return "support-feedback-error";
   }
 
-  return "border-blue-400/30 bg-blue-500/10 text-blue-100";
+  return "support-feedback-loading";
 }
 
 type ContactItemProps = {
@@ -378,7 +378,7 @@ export default function ContactsPage() {
                   >
                     <p className="font-medium">
                       {submitState.status === "success"
-                        ? "Заявка отправлена"
+                        ? "Заявка успешно отправлена в техподдержку"
                         : submitState.status === "loading"
                           ? "Отправляем заявку"
                           : "Не удалось отправить"}
