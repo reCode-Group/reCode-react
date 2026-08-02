@@ -204,6 +204,16 @@ html[data-theme="light"] .pricing-card-panel-standard {
     pointer-events: none;
 }
 
+html {
+    overflow-y: scroll;
+    scrollbar-gutter: stable;
+}
+
+html[style*="overflow: hidden"] {
+    overflow-y: scroll !important;
+    padding-right: 0 !important;
+}
+
 .header-wrap > * {
     pointer-events: auto;
 }
