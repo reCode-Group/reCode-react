@@ -56,7 +56,7 @@ function LegalBlockView({ block }: { block: LegalBlock }) {
         {block.title ? <h3 className="theme-heading mb-4 text-lg font-semibold md:text-xl">{block.title}</h3> : null}
         <div className="overflow-x-auto rounded-2xl border border-slate-400/30">
           <table className="min-w-full border-collapse text-left text-sm md:text-base">
-            {block.headers ? <thead className="bg-white/10"><tr>{block.headers.map((header) => <th key={header} className="theme-heading border-b border-slate-400/25 px-4 py-3 font-semibold">{header}</th>)}</tr></thead> : null}
+            {block.headers ? <thead className="bg-white/10"><tr>{block.headers.map((header) => <th key={header} className="theme-heading whitespace-nowrap border-b border-slate-400/25 px-4 py-3 font-semibold">{header}</th>)}</tr></thead> : null}
             <tbody>
               {block.rows.map((row, rowIndex) => (
                 <tr key={rowIndex} className="align-top even:bg-white/[0.03]">
