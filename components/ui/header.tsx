@@ -93,7 +93,7 @@ export default function Header() {
             <Popover className="relative">
               {({ open }) => (
                 <>
-                  <PopoverButton className="header-nav-link accent-focus flex items-center gap-2 focus-visible:outline-hidden">
+                  <PopoverButton className="header-nav-link accent-focus flex cursor-pointer items-center gap-2 focus-visible:outline-hidden">
                     <span>РЕСУРСЫ</span>
                     <svg
                       className={`h-3 w-3 transition-transform ${open ? "rotate-180" : ""}`}
@@ -210,7 +210,7 @@ export default function Header() {
               <Disclosure as="div" className="grid gap-1">
                 {({ open }) => (
                   <>
-                    <DisclosureButton className="header-mobile-link accent-focus flex w-full items-center justify-between text-left focus-visible:outline-hidden">
+                    <DisclosureButton className="header-mobile-link accent-focus flex w-full cursor-pointer items-center justify-between text-left focus-visible:outline-hidden">
                       <span>РЕСУРСЫ</span>
                       <svg
                         className={`h-3 w-3 transition-transform ${open ? "rotate-180" : ""}`}

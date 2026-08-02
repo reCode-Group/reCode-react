@@ -50,7 +50,6 @@ export default function CookieBanner() {
         >
           файлы куки
         </Link>
-        .
       </p>
       <button
         className="btn btn-primary mt-4 w-full shrink-0 cursor-pointer sm:mt-0 sm:w-auto"
