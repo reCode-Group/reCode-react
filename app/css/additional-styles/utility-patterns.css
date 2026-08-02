@@ -683,6 +683,10 @@ html[data-theme="light"] .testimonial-pill-idle:hover {
     background: var(--site-card-bg);
 }
 
+.blog-card::before {
+    z-index: 10;
+}
+
 .cta-panel {
     background: linear-gradient(to right, transparent, rgb(31 41 55 / 0.5), transparent);
 }

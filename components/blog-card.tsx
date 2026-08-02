@@ -9,7 +9,7 @@ type BlogCardProps = {
 
 export default function BlogCard({ article }: BlogCardProps) {
   return (
-    <article className="testimonial-card flex h-full flex-col overflow-hidden rounded-[24px]">
+    <article className="testimonial-card blog-card flex h-full flex-col overflow-hidden rounded-[24px]">
       <div className="relative aspect-[21/9]">
         <Image
           src={article.previewImage}
